@@ -1,0 +1,1679 @@
+/* =========================================================
+   Cheryl Tang — portfolio
+   ========================================================= */
+
+:root {
+  /* Colour */
+  --bg: #faf9f7;
+  --surface: #ffffff;
+  --ink: #2b2b2b;
+  --ink-soft: #4d4d4d;
+  --ink-muted: #757575;
+  --green-deep: #27391c;
+  --green: #3a5a40;
+  --rule: #1a1a1a;
+
+  /* Project-page palette */
+  --dark: #161221;
+  --dark-raised: #292533;
+  --band: #4c4c4c;
+  --white: #ffffff;
+  --white-soft: #dedce4;
+
+  /* Project-page NEW palette */ 
+  --bg-dark: #161221;
+  --bg-grey: #4D4D4D;
+  --bg-light: rgba(117,117,117,.1);
+  --bg-lightt: rgba(117,117,117,.04);
+  --bg-white: #FFFFFF;
+  --bg-purple: #E8E8F4;
+
+
+  --placeholder: #e9e7e3;
+  --placeholder-ink: #a09b93;
+
+  /* Type */
+  --font-display: "Inter", sans-serif;
+  --font-sans: "Poppins", "Avenir Next", "Avenir",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Layout — each --container-* is a *content* width; gutters sit outside it */
+  --container: 1220px;        /* home + more image grids */
+  --container-narrow: 1040px; /* about */
+  --container-project: 1200px;
+  --gutter: 30px;
+  --gutter-wide: 40px;        /* header + project page */
+  --header-h: 62px;
+  --grid-gap: 10px;
+  --panel-pad: 40px;          /* inner padding of project panels */
+
+   /* Hero title */
+  --hero-title-size: clamp(16px, 4.2vw, 56px);
+  --hero-subtitle-size: clamp(10px, 2.3vw, 30px);
+   }
+   
+   .project-hero__title,
+   .project-hero__title__dark,
+   .project-hero__title__black,
+   .detail-hero__copy h1,
+   .wall-hero__title,
+   .urban-hero__title {
+       font-size: var(--hero-title-size);
+   }
+   .project-hero__subtitle,
+   .project-hero__subtitle__dark,
+   .project-hero__subtitle__black,
+   .detail-hero__copy p,
+   .wall-hero__subtitle,
+   .urban-hero__subtitle {
+      margin-top: clamp(4px, 0.8vw, 10px); 
+      font-size: var(--hero-subtitle-size);
+   }
+
+
+
+/* =========================================================
+   Base
+   ========================================================= */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg);
+  color: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1;
+}
+
+img { max-width: 100%; }
+
+/* Keep [hidden] winning over the display rules further down. */
+[hidden] { display: none !important; }
+
+a { color: inherit; }
+
+h1, h2, h3, p, dl, dd, figure { margin: 0; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   Image slots
+   Every image sits in a `.ph` (placeholder) wrapper so the
+   layout holds its shape before the real artwork is dropped
+   in. If a file is missing, js/main.js flags the slot and we
+   render its alt text as a label instead of a broken icon.
+   ========================================================= */
+
+.ph {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.ph > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ph--contain > img { object-fit: contain; }
+
+.is-missing::before {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--placeholder-ink);
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--surface);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: var(--header-h);
+  padding: 0 var(--gutter-wide);
+  max-width: calc(var(--container-project) + 2 * var(--gutter-wide));
+  margin: 0 auto;
+}
+
+.brand {
+  display: block;
+  flex: none;
+  width: 40px;
+  height: 40px;
+}
+
+.brand img { display: block; width: 100%; height: 100%; object-fit: contain; }
+
+.brand.is-missing {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand.is-missing::before {
+  content: attr(data-label);
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--green-deep);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav__link {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-muted);
+  transition: color 0.2s ease;
+}
+
+.nav__link:hover { color: var(--green-deep); }
+
+.nav__link.is-active {
+  color: var(--green-deep);
+  font-weight: 600;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.site-footer {
+  background: var(--surface);
+  padding: clamp(28px, 5vw, 46px) var(--gutter) clamp(30px, 5vw, 50px);
+  text-align: center;
+  color: var(--ink-muted);
+  font-size: clamp(12px, 1.4vw, 16px);
+}
+
+.site-footer__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-footer__links a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer__links a:hover {
+   color: var(--green); }
+
+.site-footer__sep {
+  display: inline-block;
+  margin: 0 22px;
+  color: #bdbdbd;
+}
+
+.site-footer__copy {
+  margin-top: clamp(16px, 2vw, 22px);
+  font-size: clamp(12px, 1.2vw, 14px);
+}
+
+/* =========================================================
+   Page shells
+   ========================================================= */
+
+.container {
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.container--narrow {
+  max-width: calc(var(--container-narrow) + 2 * var(--gutter));
+}
+
+/* =========================================================
+   Home — intro
+   ========================================================= */
+
+.intro { padding: 46px 0 40px; }
+
+.intro__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  color: var(--green-deep);
+}
+
+.intro__tagline {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.5vw, 45px);
+  line-height: 1.1;
+  color: var(--green);
+}
+
+/* =========================================================
+   Work grid + tiles
+   ========================================================= */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--grid-gap);
+  padding-bottom: clamp(20px, 4vw, 40px);
+}
+
+.work-grid--top { padding-top: 40px; }
+
+.tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--placeholder);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.tile > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* The dimmer is a layer rather than a filter on the image, so
+   the hover state still reads while artwork is missing. */
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 16, 26, 0.62);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tile__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 1vw, 10px);
+  padding: clamp(16px, 2vw, 28px);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tile:hover > img,
+.tile:focus-visible > img { transform: scale(1.04); }
+
+.tile:hover::after,
+.tile:focus-visible::after { opacity: 1; }
+
+.tile:hover .tile__overlay,
+.tile:focus-visible .tile__overlay { opacity: 1; }
+
+.tile__title {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.tile__rule {
+  width: clamp(70px, 12vw, 140px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.65);
+  margin: 8px 0 10px;
+
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+.tile:hover .tile__rule,
+.tile:focus-visible .tile__rule {
+  transform: scaleX(1);
+}
+
+.tile__meta {
+  font-size: clamp(12px, 1.3vw, 16px);
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* A tile with no destination yet is not focusable and gets a
+   plain cursor, but keeps the hover treatment. */
+.tile:not([href]) { cursor: default; }
+
+/* While artwork is still missing, drop the slot label on hover so it
+   doesn't collide with the overlay copy. */
+.tile.is-missing::before { transition: opacity 0.3s ease; }
+
+.tile:hover.is-missing::before,
+.tile:focus-visible.is-missing::before { opacity: 0; }
+
+/* =========================================================
+   About
+   ========================================================= */
+
+.about { padding: 40px 0 clamp(20px, 4vw, 40px); }
+
+.about__top {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 58px;
+  align-items: start;
+}
+
+.about__portrait {
+   aspect-ratio: 1 / 1;
+   border-radius: 6px;
+  overflow: hidden;
+}
+
+.about__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  color: var(--green-deep);
+  margin-bottom: 26px;
+}
+
+.prose p { color: var(--ink-soft); }
+
+.prose p + p { margin-top: 22px; }
+
+.prose strong { color: var(--ink-soft); font-weight: 500; }
+
+/* Career timeline */
+
+.timeline { margin-top: 34px; }
+
+.timeline__row {
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.timeline__year {
+  text-align: right;
+  color: var(--ink-soft);
+  font-weight: 500;
+  padding-top: 1px;
+}
+
+.timeline__role { margin: 0; color: var(--ink-soft); }
+
+.timeline__role a {
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.timeline__co { color: var(--ink-soft); }
+
+.timeline__job { display: block; margin-top: 3px; }
+
+/* Experience block */
+
+.about__rule {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 56px 0 46px;
+}
+
+.about__bottom {
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  gap: 58px;
+  align-items: center;
+}
+
+.about__subtitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin-bottom: 20px;
+}
+
+.client-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-logos .ph {
+  background: transparent;
+}
+
+.client-logos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =========================================================
+   Project page
+   ========================================================= */
+
+.project {
+  max-width: calc(var(--container-project) + 2 * var(--gutter-wide));
+  margin: 0 auto;
+  padding: 0 var(--gutter-wide) clamp(20px, 4vw, 40px);
+}
+
+.panel { padding: 40px var(--panel-pad); color: var(--ink-soft); }
+.panel--dark { background: var(--bg-dark); color: var(--white); }
+.panel--grey { background: var(--bg-grey); color: var(--white); }
+.panel--light { background: var(--bg-light); color: var(--ink-soft); }
+.panel--lightt { background: var(--bg-lightt); color: var(--ink-soft); }
+.panel--white { background: var(--bg-white); color: var(--ink-soft); }
+.panel--purple { background: var(--bg-purple); color: var(--ink-soft); }
+
+/* Images that run edge to edge inside a panel. */
+.bleed { margin-inline: calc(var(--panel-pad) * -1); }
+.bleed-top { margin-top: calc(var(--panel-pad) * -1); }
+.bleed-bottom { margin-bottom: calc(var(--panel-pad) * -1); }
+.bleed-flush { margin: 40px calc(var(--panel-pad) * -1) 0;  }
+
+/* Hero */
+
+.project-hero {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  background: var(--dark);
+}
+
+.project-hero__copy {
+  position: absolute;
+  top: clamp(16px, 3vw, 40px);
+  left: clamp(16px, 3vw, 40px);
+  z-index: 1;
+  color: var(--white);
+}
+
+
+.project-hero__title,
+.project-hero__title__dark,
+.project-hero__title__black {
+  font-size: var(--hero-title-size);
+  font-weight: 280;
+  letter-spacing: 0.22em;
+}
+
+.project-hero__title__dark {
+  color: var(--ink-muted);
+}
+
+.project-hero__title__black {
+  color: var(--green-deep);
+}
+
+.project-hero__subtitle,
+.project-hero__subtitle__dark,
+.project-hero__subtitle__black {
+  margin-top: clamp(4px, 0.8vw, 10px);
+  font-size: var(--hero-subtitle-size);
+  letter-spacing: 0.2em;
+}
+
+.project-hero__subtitle {
+  font-weight: 400;
+}
+
+.project-hero__subtitle__dark {
+  color: var(--ink-muted);
+  font-weight: 450;
+}
+
+.project-hero__subtitle__black {
+  color: var(--green-deep);
+  font-weight: 450;
+}
+
+
+.project-hero__tools {
+  position: absolute;
+  top: clamp(16px, 3vw, 40px);
+  right: clamp(16px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.5vw, 20px);
+}
+
+.project-hero__tools img {
+  width: clamp(20px, 2.6vw, 40px);
+  height: auto;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* Too small to carry a label — leave the empty square. */
+.project-hero__tools .ph.is-missing::before { content: ""; }
+
+/* Summary band */
+
+.project-band {
+  background: var(--band);
+  color: var(--white);
+  padding: 46px var(--panel-pad);
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Section headings + copy */
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+   
+.section-head__title {
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.section-head__sub {
+  font-size: clamp(12px, 3vw, 18px);
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.section-copy {
+  max-width: 1010px;
+  margin: 22px auto 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--white-soft);
+}
+
+.section-copy + .section-copy { margin-top: 26px; }
+
+.stack { margin: 40px; }
+
+.stack--tight { margin-top: 28px; }
+
+/* Media rows */
+
+.media-row {
+  display: grid;
+  gap: 20px;
+}
+
+.media-row--2 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+.media-row--3 { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+.media-row--gap-sm { gap: 20px; }
+
+/* The sketch sheet is much wider than the model shelf beside it, and the
+   pair shares one height — so the ratio lives on the row. */
+.media-row--wide-narrow {
+  display: grid;
+  grid-template-columns: 835fr 345fr;
+  gap: 20px;
+  align-items: stretch;
+  background: var(--bg-dark);
+}
+
+.media-row--wide-narrow .ph { aspect-ratio: auto; }
+
+.media-row--wide-narrow img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media--diagram { background: #fff; }
+
+.media--diagram > img { object-fit: contain; }
+
+.media--2x1 { aspect-ratio: 2 / 1; }
+
+.media--16x9 { aspect-ratio: 16 / 9; }
+
+.media--4x3 { aspect-ratio: 4 / 3; }
+
+.media--3x2 { aspect-ratio: 3 / 2; }
+
+.media--1x1 { aspect-ratio: 1 / 1; }
+
+.media--4x5 { aspect-ratio: 4 / 5; }
+
+.media--3x4 { aspect-ratio: 3 / 4; }
+
+.media--collage { aspect-ratio: 1200 / 800;
+  
+}
+
+/* A white sheet holding one or more full-width graphics that must not be
+   cropped — the reference tables and technical diagrams. */
+.media-sheet {
+  font-size: 0;
+}
+
+.media-sheet img,
+.media-sheet video { display: block; width: 100%; }
+
+/* Looping clips stand in for what would otherwise be very large GIFs. */
+.ph > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media--diagram > video { object-fit: contain; }
+
+/* A section that sits directly on the page ground rather than a panel. */
+.panel--page { color: var(--ink); }
+
+.panel--page .section-head__title { color: var(--dark); }
+
+.panel--page .section-copy,
+.panel--page .section-head__sub { color: var(--ink-soft); }
+
+/* The Problem breakdown and the three strap concepts ship as artwork with
+   their own transparent ground, so they get no placeholder fill. */
+.figure-row {
+  display: grid;
+  align-items: start;
+}
+
+.figure-row img { display: block; width: 100%; }
+
+/* Sits marginally wider than the panel's own padding, as in the mockup. */
+.figure-row--problem {
+  grid-template-columns: repeat(2, 1fr);
+  margin-inline: -8px;
+}
+
+/* The card artwork carries its own margin, so the CSS gap is small — the
+   ~50px seen between photos in the mockup is mostly the images' own padding. */
+.figure-row--concepts {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Feature cards */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 56px 100px;
+  margin-top: 48px;
+}
+
+.feature__media { aspect-ratio: 4 / 3; }
+
+.feature__title {
+  margin-top: 26px;
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 400;
+}
+
+.feature__body {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--white-soft);
+}
+
+/* Light closing section */
+
+.panel--light .section-head__title { color: var(--dark); }
+
+.context-stack {
+   display: grid;
+   gap: clamp(10px, 2vw, 20px);
+   margin-top: 40px;
+}
+
+/* =========================================================
+   Nokia Micro Earbuds Pro
+   ========================================================= */
+
+.project--nokia {
+  background: #fff;
+  color: #666;
+}
+
+.project-hero--nokia {
+  aspect-ratio: 1200 / 800;
+  background: #eee;
+}
+
+.project-hero--nokia > img { object-position: center 42%; }
+
+.project-hero__copy--nokia {
+  color: #777;
+  top: 48px;
+}
+
+.project-hero__copy--nokia .project-hero__title {
+  font-size: clamp(30px, 4vw, 54px);
+  letter-spacing: .22em;
+}
+
+.project-hero__copy--nokia .project-hero__subtitle {
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.12;
+  letter-spacing: .18em;
+}
+
+.project-band--nokia {
+  background: #fff;
+  color: #999;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.nokia-section {
+  padding: 58px var(--panel-pad) 0;
+  background: #fff;
+}
+
+.nokia-section--grey { background: #f1f0ef; }
+
+.nokia-section--no-top { padding-top: 0; }
+
+.nokia-section .section-head__title {
+  color: #666;
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.nokia-section .section-head__sub {
+  color: #999;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.nokia-copy {
+  padding: 44px 30px;
+  color: #aaa;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.nokia-copy p + p { margin-top: 18px; }
+
+.nokia-media {
+  display: block;
+  width: 100%;
+  margin-top: 46px;
+}
+
+.nokia-media--flush {
+  width: calc(100% + 2 * var(--panel-pad));
+  max-width: none;
+  margin-inline: calc(var(--panel-pad) * -1);
+}
+
+.nokia-media--contain {
+  height: auto;
+  object-fit: contain;
+}
+
+.nokia-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 46px;
+}
+
+.nokia-pair img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.nokia-pair--tall img { aspect-ratio: 1 / 1.45; }
+
+.nokia-visual img {
+  display: block;
+  width: 100%;
+}
+
+.nokia-products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 60px var(--panel-pad);
+}
+
+.nokia-products img { display: block; width: 100%; }
+
+.nokia-head--after { padding: 52px 0 24px; }
+
+.nokia-media--splash {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.nokia-context { padding-bottom: 0; }
+
+.nokia-context__stack {
+  display: grid;
+  gap: 18px;
+  margin-top: 44px;
+  margin-inline: calc(var(--panel-pad) * -1);
+}
+
+.nokia-context__stack img {
+  display: block;
+  width: 100%;
+  max-height: 760px;
+  object-fit: cover;
+}
+
+/* =========================================================
+   Hubble Nursery Pal Glow
+   ========================================================= */
+
+.project--hubble {
+  background: #fff;
+  color: #666;
+}
+
+.project-hero--hubble {
+  aspect-ratio: 1200 / 800;
+  background: #eee7e1;
+}
+
+.project-hero--hubble > img { object-position: center; }
+
+.project-hero__copy--hubble {
+  top: 48px;
+  color: #707070;
+}
+
+.project-band--hubble {
+  background: #fff;
+  color: #969696;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.hubble-section {
+  padding: 58px var(--panel-pad) 0;
+  background: #fff;
+}
+
+.hubble-section--grey { background: #f1f0ef; }
+
+.hubble-section--dark {
+  padding-bottom: 48px;
+  background: #15111f;
+  color: #fff;
+}
+
+.hubble-section .section-head__title {
+  color: #606060;
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.hubble-section .section-head__sub {
+  color: #999;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.hubble-section--dark .section-head__title { color: #fff; }
+
+.hubble-section--dark .section-head__sub { color: #aaa5b0; }
+
+.hubble-copy {
+  padding: 45px 24px;
+  color: #999;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.hubble-media {
+  display: block;
+  width: 100%;
+  margin-top: 46px;
+}
+
+.hubble-media--flush {
+  width: calc(100% + 2 * var(--panel-pad));
+  max-width: none;
+  margin-inline: calc(var(--panel-pad) * -1);
+}
+
+.hubble-media--joined { margin-top: 0; }
+
+.hubble-media--contain {
+  height: auto;
+  object-fit: contain;
+}
+
+.hubble-night {
+  aspect-ratio: 1.48 / 1;
+  object-fit: cover;
+}
+
+.hubble-head--embedded { padding: 58px 0 0; }
+
+.hubble-context-shot {
+  aspect-ratio: 1.45 / 1;
+  object-fit: cover;
+}
+
+/* =========================================================
+   Mimo app ecosystem
+   ========================================================= */
+
+.project--mimo {
+  background: #fff;
+  color: #646464;
+}
+
+.mimo-hero {
+  position: relative;
+  background: #fafafa;
+}
+
+.mimo-hero > img {
+  display: block;
+  width: 100%;
+}
+
+.mimo-hero__copy {
+  position: absolute;
+  z-index: 1;
+  top: 46px;
+  left: var(--panel-pad);
+  color: #777;
+}
+
+.project-band--mimo {
+  background: #fff;
+  color: #999;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.mimo-section {
+  background: #fff;
+  padding-top: 48px;
+}
+
+.mimo-section--soft { background: #f7f6f5; }
+
+.mimo-section--lavender { background: #f0f0fc; }
+
+.mimo-media {
+  display: block;
+  width: 100%;
+}
+
+.mimo-media--joined { margin-top: 0; }
+
+.mimo-text {
+  padding: 54px var(--panel-pad);
+  text-align: center;
+}
+
+.mimo-text h2,
+.mimo-question {
+  color: #606060;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.mimo-text p {
+  margin-top: 25px;
+  color: #9a9a9a;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.mimo-text p + p { margin-top: 18px; }
+
+.mimo-text--body { padding-top: 34px; }
+
+.mimo-question {
+  padding: 62px 20px;
+  text-align: center;
+  font-size: clamp(24px, 2.65vw, 34px);
+}
+
+.mimo-caption {
+  padding: 28px 20px 75px;
+  color: #a0a0a0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.mimo-caption strong { color: #777; font-weight: 600; }
+
+.mimo-modes img {
+  display: block;
+  width: 100%;
+}
+
+/* =========================================================
+   MaskFone
+   ========================================================= */
+
+.project--maskfone {
+  background: #fff;
+  color: #666;
+}
+
+.maskfone-hero {
+  position: relative;
+  aspect-ratio: 1200 / 800;
+  overflow: hidden;
+  background: #eee;
+}
+
+.maskfone-hero__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.maskfone-hero__logo {
+  position: absolute;
+  top: 3.2%;
+  left: 4%;
+  width: 15%;
+}
+
+.maskfone-hero__award {
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+  width: 8%;
+}
+
+.maskfone-intro,
+.maskfone-copy {
+  padding: 54px 30px;
+  color: #999;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.maskfone-intro p + p { margin-top: 25px; }
+
+.maskfone-video {
+  width: 100%;
+  max-width: 1200px;   /* Match your image width if needed */
+  margin: 2rem auto;
+  aspect-ratio: 16 / 9;
+}
+
+.maskfone-video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.maskfone-copy { padding-block: 58px; }
+
+.maskfone-media {
+  display: block;
+  width: 100%;
+}
+
+.maskfone-media--product {
+  padding: 42px 55px;
+  background: #fbfaf9;
+  object-fit: contain;
+}
+
+.maskfone-section { padding-top: 58px; }
+
+.maskfone-section .section-head {
+  padding-inline: 30px;
+}
+
+.maskfone-section .section-head__title {
+  color: #5f5f5f;
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.maskfone-section .section-head__sub {
+  color: #999;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.maskfone-lifestyle { margin-top: 48px; }
+
+.maskfone-context {
+  display: grid;
+  gap: 18px;
+  margin-top: 48px;
+}
+
+.maskfone-context img {
+  display: block;
+  width: 100%;
+}
+
+/* =========================================================
+   Netflix House / Netflix V/RTUALS
+   ========================================================= */
+
+.project--netflix {
+  background: #fff;
+  color: #666;
+}
+
+.netflix-hero {
+  position: relative;
+  aspect-ratio: 1200 / 800;
+  overflow: hidden;
+  background: #222;
+}
+
+.netflix-hero__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.netflix-hero__copy {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
+  text-shadow: 0 1px 15px rgba(0, 0, 0, .25);
+}
+
+.netflix-intro,
+.netflix-note {
+  padding: 54px 30px;
+  color: #8f8f8f;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.netflix-media {
+  display: block;
+  width: 100%;
+}
+
+.netflix-section {
+  padding: 58px 0 0;
+  background: #fff;
+}
+
+.netflix-section .section-head {
+  padding: 0 30px 50px;
+}
+
+.netflix-section .section-head__title {
+  color: #5d5d5d;
+  font-size: clamp(30px, 3.4vw, 44px);
+}
+
+.netflix-section .section-head__sub {
+  color: #8f8f8f;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.netflix-equipment {
+  padding-inline: 38px;
+  object-fit: contain;
+}
+
+.netflix-note strong { color: #555; font-weight: 600; }
+
+.netflix-context { padding-top: 72px; }
+
+.netflix-context__stack {
+  display: grid;
+  gap: 18px;
+}
+
+.netflix-context__stack img,
+.netflix-context__stack video {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.netflix-context__pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.netflix-context__pair img,
+.netflix-context__pair video {
+  height: 100%;
+  max-height: 720px;
+}
+
+/* =========================================================
+   More detail pages
+   ========================================================= */
+
+.detail-page {
+  background: #fff;
+  color: #666;
+}
+
+.detail-hero {
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.detail-hero > img,
+.detail-media,
+.detail-stack > img,
+.detail-feature > img {
+  display: block;
+  width: 100%;
+}
+
+.detail-hero__copy {
+  position: absolute;
+  top: 44px;
+  left: 42px;
+  color: #777;
+}
+
+.detail-hero__copy--dark { color: var(--green-deep); }
+.wall-hero__title {
+  font-size: var(--hero-title-size);
+  font-weight: 280;
+  letter-spacing: .22em;
+}
+
+.wall-hero__subtitle {
+  margin-top: 10px;
+  font-size: var(--hero-subtitle-size);
+  font-weight: 450;
+  letter-spacing: .2em;
+}
+
+.detail-hero__copy h1,
+.urban-hero__title {
+  font-size: var(--hero-title-size);
+  font-weight: 280;
+  letter-spacing: .22em;
+}
+
+.detail-hero__copy p,
+.urban-hero__subtitle {
+  margin-top: 10px;
+  font-size: var(--hero-subtitle-size);
+  font-weight: 400;
+  letter-spacing: .2em;
+}
+
+.detail-copy {
+  padding: 52px 30px;
+  color: #929292;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.detail-copy strong { color: #666; font-weight: 600; }
+
+.detail-media--joined { margin-top: 0; }
+
+.detail-block--grey { background: #f6f5f4; }
+
+.detail-heading {
+  padding: 56px 30px 44px;
+  text-align: center;
+}
+
+.detail-heading h2 {
+  color: #606060;
+  font-size: clamp(29px, 3.4vw, 43px);
+  font-weight: 400;
+}
+
+.detail-heading p {
+  margin-top: 22px;
+  color: #999;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.detail-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.detail-feature { background: #f5f4f3; }
+
+.detail-section { padding-top: 46px; }
+
+.urban-title {
+  padding: 48px 42px 40px;
+  color: #777;
+}
+
+.urban-page { background: #faf9f7; }
+
+.urban-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    margin:
+     clamp(16px, 3vw, 40px)
+     clamp(16px, 3vw, 40px)
+     30px;
+}
+
+.urban-title{
+    padding:0;
+}
+
+.urban-tools{
+    display:flex;
+    flex-direction:column;
+    gap: clamp(10px, 1.5vw, 20px);
+}
+
+.urban-tools img{
+    width: clamp(20px, 2.6vw, 40px);
+    height: auto;
+    display: block;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .about__top,
+  .about__bottom {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Single column: lead with the portrait, then the intro, then the
+     career list — the two-column reading order doesn't survive stacking. */
+  .about__col { display: contents; }
+  .about__portrait {
+     order: 1;
+     width: min(100%, 460px);
+     margin: 0 auto;
+  }
+  .about__intro {
+     order: 2;
+  }
+   
+  .timeline {
+    order: 3;
+    margin-top: 40px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .timeline__row {
+    grid-template-columns: 120px auto;
+    column-gap: 24px;
+    text-align: left;
+    width: max-content;
+  }
+
+  .timeline__year {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .timeline__role,
+  .timeline__co,
+  .timeline__job {
+    text-align: left;
+  }
+   
+  .about__experience {
+     order: -1;
+  }
+
+  .feature-grid { gap: 44px 48px; }
+
+  .media-row--wide-narrow { grid-template-columns: 1fr 1fr; }
+}
+
+
+@media (max-width: 760px) {
+  :root {--gutter: 20px; --gutter-wide: 20px; --panel-pad: 20px; }
+
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .feature-grid,
+  .media-row--2,
+  .media-row--3,
+  .media-row--wide-narrow,
+  .figure-row--problem,
+  .figure-row--concepts,
+  .nokia-pair,
+  .nokia-products { grid-template-columns: 1fr; }
+
+  .media-row--wide-narrow .ph { aspect-ratio: auto; }
+
+  .media-row--wide-narrow img { height: auto; object-fit: contain; }
+
+  .figure-row--problem,
+  .figure-row--concepts {
+    display: flex;
+    overflow-x: auto;
+    margin-inline: 0;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+   
+    /* Hide scrollbar */
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE/Edge */
+  }
+
+  .figure-row--problem::-webkit-scrollbar {display: none; /* Chrome, Safari */ }
+
+  .figure-row--problem img, 
+  .figure-row--concepts img {
+    flex: 0 0 85%;
+    max-width: 85%;
+    height: auto;
+    scroll-snap-align: start;
+  }
+
+  .project-hero,
+  .project-hero--nokia,
+  .project-hero--hubble,
+  .maskfone-hero,
+  .netflix-hero {
+    position: relative;
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .project-hero > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  }
+   
+  .project-hero--nokia > img,
+  .project-hero--hubble > img,
+  .maskfone-hero__photo,
+  .netflix-hero > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  .maskfone-media--product { padding: 24px 12px; }
+
+  .netflix-hero__copy {
+    top: 25px;
+    left: 20px;
+  }
+
+  .netflix-equipment { padding-inline: 8px; }
+
+  .netflix-context__pair { grid-template-columns: 1fr; }
+
+  .detail-hero__copy {
+    top: 24px;
+    left: 20px;
+  }
+
+  .nav { gap: 20px; }
+
+  .site-footer {
+    padding: 28px 20px 32px;
+  }
+
+  .site-footer__links {
+    gap: 8px;
+  }
+
+  .site-footer__sep {
+    margin: 0 8px;
+  }
+}
+
+
+@media (max-width: 520px) {
+
+  .work-grid { grid-template-columns: 1fr; }
+
+  .site-footer__links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .site-footer__sep {
+    display: none;
+  }
+
+  .site-footer__copy {
+    margin-top: 18px;
+  }
+
+  .timeline__row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .timeline__year { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  .tile:hover > img { transform: none; }
+}
