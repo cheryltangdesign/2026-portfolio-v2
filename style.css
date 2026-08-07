@@ -165,7 +165,7 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       }
 
-   .job div:nth-child(1){ text-align: left; color:var(--grey-light); }
+   .job div:nth-child(1){ text-align: left; color: var(--grey-light); }
    .job div:nth-child(2){ text-align: left; }
    .job div:nth-child(3){ text-align: right; }
 
@@ -176,7 +176,12 @@
       gap: 70px;
       align-items: center;
       }
-   
+
+   .brands-content p{
+       margin: 0;
+       line-height: 1.7;
+   }
+
    .brands-image{ overflow:hidden; }
 
    .project img,
@@ -198,14 +203,13 @@
        align-items: start;
    }
    
-   .contact-content{ max-width:520px; }
+   .contact-content{ max-width: 480px; }
    
-   .contact-content > div{ margin-bottom:24px; }
+   .contact-content > div{ margin-bottom: 20px; }
    
    .contact-content p{
-       margin:0;
-       font-size:15px;
-       line-height:1.7;
+       margin: 0;
+       line-height: 1.7;
    }
    
    .contact-content p:first-child{
