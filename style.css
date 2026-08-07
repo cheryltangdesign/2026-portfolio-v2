@@ -30,8 +30,8 @@
   --gutter:32px;
    
   /* Spacing */
-  --section:140px;
-  --gap:24px;
+  --section: 120px;
+  --gap: 24px;
 }
 
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -109,7 +109,7 @@
    .section-title a:visited,
    .section-title a:active { color:var(--grey-dark); text-decoration:none; }
 
-   .section-title a:hover{ color:var(--green); }
+   .section-title a:hover{ color:var(--green); transition: .2s; }
    .section-title .star{ color: var(--green); margin-right:8px; }
    .section-title h2{ font-size:36px; font-weight:500; color: var(--grey-light); }
    .section-title a{ text-decoration:none; color:inherit; }
@@ -159,11 +159,16 @@
    
    .job{
       display: grid;
-      grid-template-columns: 160px 320px 1fr;
-      gap: 24px;
-      padding-bottom: 18px;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 24px 0;
       border-bottom: 1px solid var(--grey-light);
       }
+
+   .job div:nth-child(1){ text-align:left; color:var(--grey-light); }
+   .job div:nth-child(2){ text-align:center; }
+   .job div:nth-child(3){ text-align:right; }
 
    /* Experience */
    .brands{
@@ -187,28 +192,24 @@
    
 
    /* Contact */
-   .contact{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 32px;
-      }
+   .contact{ display: flex; flex-direction:column; }
 
    .contact div{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      border-bottom:1px solid var(--grey-light);
-      padding-bottom:20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
       }
+
    .contact p{
-      font-weight:600;
+      font-weight: 600;
       color:var(--grey);
       }
 
    .contact a{
       color:var(--grey-dark);
       text-decoration: none;
-      font-weight:500;
+      font-weight: 500;
       }
    .contact a:hover{ color:var(--green); }
 
@@ -218,7 +219,7 @@
      background: var(--white);
      padding: clamp(28px, 5vw, 46px) var(--gutter) clamp(30px, 5vw, 50px);
      text-align: center;
-     color: var(--grey);
+     color: var(--grey-light);
      font-size: clamp(12px, 1.4vw, 16px);
    }
 
@@ -260,7 +261,10 @@
    .about{ grid-template-columns:1fr; }
    .brands{ grid-template-columns:1fr; gap:40px; }
    .contact{ grid-template-columns:1fr; }
-   .job{ grid-template-columns:1fr; }
+   .job{ grid-template-columns:1fr; gap:8px;}
+      .job div:nth-child(1),
+      .job div:nth-child(2),
+      .job div:nth-child(3) { text-align:left; }
    section{ padding:80px 0; }
  
    }
