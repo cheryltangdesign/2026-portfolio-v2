@@ -4,105 +4,178 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cheryl Tang — Industrial Designer</title>
-  <meta name="description" content="Cheryl Tang is an industrial designer based in Vancouver, creating honest and meaningful designs.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="index.html" data-label="CT" aria-label="Cheryl Tang — home">
-        <img src="images/logo.png" alt="Cheryl Tang">
-      </a>
-      <nav class="nav" aria-label="Main">
-        <a class="nav__link is-active" href="index.html" aria-current="page">Work</a>
-        <a class="nav__link" href="more.html">More</a>
-        <a class="nav__link" href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
+<header class="container">
+   <a class="logo" href="#">Cheryl Tang</a>
+   <nav>
+      <a href="#work">Work</a>
+       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+   </nav>
+</header>
 
   <main>
-    <div class="container">
-
-      <section class="intro">
-        <h1 class="intro__title">Hi! I&rsquo;m Cheryl.</h1>
-        <p class="intro__tagline">I create honest and meaningful designs.</p>
-      </section>
-
-      <!-- Each tile links to its corresponding detail page. -->
-      <section class="work-grid" aria-label="Selected work">
-
-        <a class="tile" href="sandbox-vr-active-head-tracker.html">
-          <img src="images/work/sandbox-vr.jpg" alt="Player wearing the Sandbox VR active head tracker">
-          <span class="tile__overlay">
-            <span class="tile__title">SANDBOX VR</span>
-            <span class="tile__title">ACTIVE HEAD TRACKER</span>
-            <span class="tile__rule"></span>
-            <span class="tile__meta">HTC vive focus series</span>
-          </span>
-        </a>
-
-        <a class="tile" href="sandbox-vr-limbs-tracker.html">
-          <img src="images/work/hand-tracker.jpg" alt="Player wearing VR headset and wrist-mounted limb trackers">
-          <span class="tile__overlay">
-            <span class="tile__title">SANDBOX VR</span>
-            <span class="tile__title">LIMBS TRACKER</span>
-            <span class="tile__rule"></span>
-            <span class="tile__meta">magnetic straps</span>
-          </span>
-        </a>
-
-        <a class="tile" href="nokia-micro-earbuds-pro.html">
-          <img src="images/work/nokia-earbuds.jpg" alt="Nokia TWS521 true wireless earbuds and charging case">
-          <span class="tile__overlay">
-            <span class="tile__title">NOKIA</span>
-            <span class="tile__title">MICRO EARBUDS PRO</span>
-            <span class="tile__rule"></span>
-            <span class="tile__meta">angled earbuds</span>
-          </span>
-        </a>
-
-        <a class="tile" href="hubble-nursery-pal-glow.html">
-          <img src="images/work/nursery-pal-glow.jpg" alt="Hubble Nursery Pal Glow camera on a dresser beside a cot">
-          <span class="tile__overlay">
-            <span class="tile__title">HUBBLE</span>
-            <span class="tile__title">NURSERY PAL GLOW</span>
-            <span class="tile__rule"></span>
-            <span class="tile__meta">baby camera</span>
-          </span>
-        </a>
-
-        <a class="tile" href="hubble-mimo-app.html">
-          <img src="images/work/mimo.jpg" alt="Mimo watch, parent app, and phone shown together">
-          <span class="tile__overlay">
-            <span class="tile__title">HUBBLE</span>
-            <span class="tile__title">Mimo APP</span>
-            <span class="tile__rule"></span>
-            <span class="tile__meta">UX UI ecosystem</span>
-          </span>
-        </a>
-
-        <a class="tile" href="hubble-maskfone.html">
-          <img src="images/work/maskfone.jpg" alt="MaskFone worn on the street, CES Innovation Award 2021 honoree">
-          <span class="tile__overlay">
-            <span class="tile__title">HUBBLE</span>
-            <span class="tile__title">MASKFONE</span>
-            <span class="tile__rule"></span>
-            <span class="tile__meta">facemask with earphone</span>
-          </span>
-        </a>
-
-      </section>
-
+    
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-image media--16x9">
+        <img src="images/hero.jpg" alt="Featured Project">
+      
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <span class="hero-tag">Featured Project</span>
+                <h1>Active Head Tracker</h1>
+                <p>
+                    Designing an immersive VR tracking system that improves
+                    comfort, precision and long-term wearability.
+                </p>
+                <a href="sandbox.html" class="hero-button">
+                    View Case Study →
+                </a>
+            </div>
+        </div>
     </div>
-  </main>
+</section>
 
+<!-- WORK -->
+<section id="work" class="container">
+    <div class="section-title">
+        <h2>✦ Selected Work</h2>
+        <a href="work.html">VIEW ALL →</a>
+    </div>
+    <div class="work-grid">
+        <a class="project" href="sandbox-vr-active-head-tracker.html">
+            <div class="media--1x1"><img src="images/ATH_icon.jpg" alt=""></div>
+            <h3>Active Head Tracker</h3>
+        </a>
+        <a class="project" href="sandbox-vr-limbs-tracker.html">
+            <div class="media--1x1"><img src="images/strap 2.5_icon.jpg" alt=""></div>
+            <h3>Limbs Tracker</h3>
+        </a>
+        <a class="project" href="nokia-micro-earbuds-pro.html">
+            <div class="media--1x1"><img src="images/TWS521_icon.jpg" alt=""></div>
+            <h3>Nokia Micro Earbuds Pro</h3>
+        </a>
+        <a class="project" href="hubble-nursery-pal-glow.html">
+            <div class="media--1x1"><img src="images/F90_icon.jpg" alt=""></div>
+            <h3>Nursery Pal Glow</h3>
+        </a>
+        <a class="project" href="hubble-mimo-app.html">
+            <div class="media--1x1"><img src="images/mimo.jpg" alt=""></div>
+            <h3>Mimo App</h3>
+        </a>
+        <a class="project" href="hubble-maskfone.html">
+            <div class="media--1x1"><img src="images/maskfone_icon.jpg" alt=""></div>
+            <h3>MaskFone</h3>
+        </a>
+    </div>
+</section>
+    
+<!-- ABOUT -->
+<section id="about" class="container">
+    <div class="section-title">
+        <h2>✦ About</h2>
+    </div>
+
+  <div class="about">
+    <div class="media--4x5"><img src="images/about.jpg"></div>
+
+    <div>
+      <p><strong>Hi, I'm Cheryl.</strong></p>
+      <br>
+      <p>An industrial designer based in Vancouver.</p>
+      <br>
+      <p>I began my career designing consumer electronics and gaming products in Hong Kong and Vancouver, working on a range of projects including VR controllers and accessories, portable audio devices, and baby monitors. These experiences shaped my foundation in taking ideas from early concept development through to production.</p>
+      <br>
+      <p>I always have a passion for exploring how materials and mechanisms can enhance user experience, often incorporating elements such as magnets, fabrics, and different plastics to create functional and engaging interactions.</p>
+      <br>
+      <p>Working across industrial design, UX/UI, and branding has shaped my approach to product development. I believe great products are more than well-designed objects, they are thoughtful experiences that connect user needs with business goals and brand identity.</p>
+      <br>
+      <p>The <strong>endless possibilities</strong> for creating and transforming everyday objects inspire me to stay proactive in an ever-evolving world. I strive to design products that are not only aesthetically appealing and practicable, but also make a positive contribution to people's lives.</p>
+      <br>
+      <p>- This is my key aspiration as a designer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="container">
+    <div class="section-title">
+        <h2>✦ Experience</h2>
+    </div>
+
+  <div class="timeline">
+    <div class="job">
+      <div>2022–NOW</div>
+      <div><strong>Sandbox VR</strong><br>Vancouver & Hong Kong</div>
+      <div>Industrial Designer</div>
+    </div>
+
+    <div class="job">
+      <div>2019–2022</div>
+      <div><strong>Binatone</strong><br>Hong Kong</div>
+      <div>Industrial Designer</div>
+    </div>
+
+    <div class="job">
+      <div>2018</div>
+      <div><strong>Holland & Barrett</strong><br>London</div>
+      <div>UX Design Consultant</div>
+    </div>
+    
+    <div class="job">
+      <div>2019</div>
+      <div><strong>Gear Atelier Limited</strong><br>Hong Kong</div>
+      <div>Design Intern</div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands" class="container">
+    <div class="section-title">
+        <h2>✦ Brands</h2>
+    </div>
+
+   <div class="brands">
+    <!-- Left -->
+    <div class="brands-image media--16x9">
+        <img src="images/brands.jpg" alt="Brands I've worked with">
+    </div>
+
+        <!-- Right -->
+    <div class="brands-content">
+        <p>Throughout my career, I have collaborated with multidisciplinary teams to design products for global consumer brands across wearables, smart home, consumer electronics and immersive entertainment.</p>
+        <br>
+        <p>My work spans concept development, user-centred research, CAD modelling, prototyping and manufacturing support, creating products that balance usability, aesthetics and production feasibility.</p>
+        <br>
+        <p>Featured collaborations include Sandbox VR, Nokia, Motorola, Hubble Connected, Netflix House, Wall Theory and University College London.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="container">
+    <div class="section-title">
+        <h2>✦ Contact</h2>
+    </div>
+  
+    <div class="contact">
+        <div><p>LinkedIn</p><a href="https://www.linkedin.com/in/cheryltang211/">www.linkedin.com/in/cheryltang211/</a></div>
+        <div><p>Email</p><a href="cheryltangdesign@gmail.com">cheryltangdesign@gmail.com</a></div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
   <footer class="site-footer">
     <div class="site-footer__inner">
       <p class="site-footer__links">
