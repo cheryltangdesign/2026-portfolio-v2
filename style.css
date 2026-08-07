@@ -65,6 +65,13 @@
    nav a{ text-decoration:none; color:var(--grey); font-size:14px; transition:.3s; }
    nav a:hover{ opacity:.5; }
 
+   .logo{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:600;
+    font-family:var(--font-display);
+   }
+
    /* Hero */
    .hero{ padding-top:80px; }
    .hero-banner{ width:100%; }
@@ -172,7 +179,11 @@
      color: var(--grey);
      font-size: clamp(12px, 1.4vw, 16px);
    }
-   
+
+   .site-footer a{
+     color:inherit;
+   }
+
    .site-footer__links {
      display: flex;
      justify-content: center;
