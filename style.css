@@ -68,12 +68,12 @@
    background: rgba(250, 249, 247, 0.9);
    backdrop-filter: blur(12px);
    -webkit-backdrop-filter: blur(12px);
-   border-bottom: 1px solid rgba(0, 0, 0, 0.06)   }
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1)   }
    
-   nav{ display:flex; gap:56px; }
+   nav{ display:flex; gap: 56px; }
    nav a{
       text-decoration:none;
-      color:var(--grey-dark);
+      color:var(--grey);
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.01em;
@@ -97,7 +97,7 @@
       justify-content: space-between;
       width: 100%;
       text-decoration: none;
-      color:var(--grey-dark);
+      color:var(--grey);
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.01em;
@@ -159,7 +159,7 @@
    
    .job{
       display: grid;
-      grid-template-columns: 160px 1fr 220px;
+      grid-template-columns: 160px 320px 1fr;
       gap: 24px;
       padding-bottom: 18px;
       border-bottom: 1px solid var(--grey-light);
@@ -183,7 +183,7 @@
        object-fit: cover;
        }
    
-   .brands-content{ max-width:480px; }
+   .brands-content{ max-width: 480px; }
    
 
    /* Contact */
@@ -202,7 +202,7 @@
       }
    .contact p{
       font-weight:600;
-      color:var(--grey-dark);
+      color:var(--grey);
       }
 
    .contact a{
