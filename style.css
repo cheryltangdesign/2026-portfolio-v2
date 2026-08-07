@@ -79,7 +79,8 @@
 
    /* Section Title */
    .section-title{ display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; }
-   .section-title h2{ font-size:36px; font-weight:500; }
+   .section-title .star{ color: var(--green); margin-right:8px; }
+   .section-title h2{ font-size:36px; font-weight:500; color: var(--grey-light);}
    .section-title a{ text-decoration:none; color:inherit; }
 
    /* Portfolio Grid */
