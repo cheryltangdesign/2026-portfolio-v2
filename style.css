@@ -44,7 +44,7 @@
    line-height: 1.55;
    color: var(--grey);
    background: var(--bg);
-   -webkit-font-smoothing:antialiased;
+   -webkit-font-smoothing: antialiased;
    }
    
    img{ display:block; width:100%; }
@@ -152,8 +152,8 @@
 
    /* Experience */
    .timeline{
-      display:grid;
-      gap:28px;
+      display: grid;
+      gap: 28px;
       }
    
    .job{
@@ -192,37 +192,37 @@
 
    /* Contact */
    .contact{
-      display:grid;
-      grid-template-columns:1.4fr 1fr;
-      gap:72px;
-      align-items:start;
-      }
-
-   .contact div{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 24px 0;
-      }
-
-   .contact-content > div{
-      display: grid;
-      grid-template-columns: 100px auto;
-      align-items: start;
-      padding: 8px 0;
-      }
-
-   .contact p:first-child{
-      font-weight: 600;
-      color:var(--grey);
-      }
-
-   .contact a{
-      color:var(--grey-dark);
-      text-decoration: none;
-      font-weight: 500;
-      }
-   .contact a:hover{ color:var(--green); }
+       display:grid;
+       grid-template-columns:42% 58%;
+       gap:70px;
+       align-items:start;
+   }
+   
+   .contact-content{ max-width:520px; }
+   
+   .contact-content > div{ margin-bottom:24px; }
+   
+   .contact-content p{
+       margin:0;
+       font-size:15px;
+       line-height:1.7;
+   }
+   
+   .contact-content p:first-child{
+       font-weight:600;
+       color:var(--grey);
+       margin-bottom:2px;
+   }
+   
+   .contact-content a{
+       text-decoration:none;
+       color:var(--grey-dark);
+       font-size:15px;
+       line-height:1.7;
+       transition:.2s;
+   }
+   
+   .contact-content a:hover{ color:var(--green); }
 
 
    /* Footer */
