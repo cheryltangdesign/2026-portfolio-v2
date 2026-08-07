@@ -22,8 +22,8 @@
   --h1: clamp(36px,5vw,60px);
   --h2: 34px;
   --h3: 22px;
-  --body:16px;
-  --small:13px;
+  --body: 16px;
+  --small: 13px;
    
   /* Width */
   --container:1280px;
@@ -39,11 +39,11 @@
    html{ scroll-behavior:smooth; }
 
    body{
-   font-family:var(--font);
-   font-size:16px;
-   line-height:1.55;
-   color:var(--text);
-   background:var(--white);
+   font-family: var(--font-sans);
+   font-size: 16px;
+   line-height: 1.55;
+   color: var(--grey);
+   background: var(--bg);
    -webkit-font-smoothing:antialiased;
    }
    
@@ -55,14 +55,14 @@
 
    /* Nav */
    header{   
-   height:70px;
-   display:flex;
+   height: 70px;
+   display: flex;
    justify-content:space-between;
    align-items:center;
    }
    
    nav{ display:flex; gap:42px; }
-   nav a{ text-decoration:none; color:var(--text); font-size:14px; transition:.3s; }
+   nav a{ text-decoration:none; color:var(--grey); font-size:14px; transition:.3s; }
    nav a:hover{ opacity:.5; }
 
    /* Hero */
@@ -90,7 +90,7 @@
    .media--2x1 { aspect-ratio:2/1; }
    .media--4x3 { aspect-ratio:4/3; }
    .media--3x4 { aspect-ratio:3/4; }
-   .media--4x5 { aspect-ratio:4/3; }
+   .media--4x5 { aspect-ratio:4/5; }
    
    .media--1x1 img,
    .media--16x9 img,
@@ -123,13 +123,10 @@
    
    .job{
       display:grid;
-      grid-template-columns:
-      120px
-      1fr
-      220px;
-      gap:24px;
-      padding-bottom:18px;
-      border-bottom:1px solid var(--lighter);
+      grid-template-columns: 120px 1fr 220px;
+      gap: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--grey-light);
       }
 
    /* Experience */
@@ -164,10 +161,10 @@
 
    /* Footer */
    .site-footer {
-     background: var(--surface);
+     background: var(--white);
      padding: clamp(28px, 5vw, 46px) var(--gutter) clamp(30px, 5vw, 50px);
      text-align: center;
-     color: var(--ink-muted);
+     color: var(--grey);
      font-size: clamp(12px, 1.4vw, 16px);
    }
    
