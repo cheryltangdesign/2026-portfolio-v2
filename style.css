@@ -68,7 +68,7 @@
    background: rgba(250, 249, 247, 0.9);
    backdrop-filter: blur(12px);
    -webkit-backdrop-filter: blur(12px);
-   border-bottom: 1px solid rgba(0, 0, 0, 0.2)   }
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1)   }
    
    nav{ display:flex; gap: 56px; }
    nav a{
@@ -193,7 +193,7 @@
    /* Contact */
    .contact{
        display:grid;
-       grid-template-columns:42% 58%;
+       grid-template-columns:1.4fr 1fr;
        gap:70px;
        align-items:start;
    }
