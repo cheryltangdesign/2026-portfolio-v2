@@ -172,10 +172,10 @@
 
    /* Experience */
    .brands{
-      display:grid;
+      display: grid;
       grid-template-columns: 1.4fr 1fr;
-      gap:72px;
-      align-items:center;
+      gap: 72px;
+      align-items: center;
       }
    
    .brands-image{ overflow:hidden; }
@@ -192,13 +192,26 @@
    
 
    /* Contact */
-   .contact{ display: flex; flex-direction:column; }
+   .contact{
+      display:grid;
+      grid-template-columns:1.4fr 1fr;
+      gap:72px;
+      align-items:start;
+      }
 
    .contact div{
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 24px 0;
+      }
+
+   .contact-content > div{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:24px 0;
+      border-bottom:1px solid var(--grey-light);
       }
 
    .contact p{
