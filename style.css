@@ -166,9 +166,9 @@
       border-bottom: 1px solid var(--grey-light);
       }
 
-   .job div:nth-child(1){ text-align:left; color:var(--grey-light); }
-   .job div:nth-child(2){ text-align:center; }
-   .job div:nth-child(3){ text-align:right; }
+   .job div:nth-child(1){ text-align: left; color:var(--grey-light); }
+   .job div:nth-child(2){ text-align: left; }
+   .job div:nth-child(3){ text-align: right; }
 
    /* Experience */
    .brands{
