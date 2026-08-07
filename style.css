@@ -103,7 +103,7 @@
       letter-spacing: 0.01em;
       transition: .2s;
       align-items: baseline;
-      margin-bottom: 40px;   }
+      margin-bottom: 36px;   }
   
    .section-title a,
    .section-title a:visited,
@@ -111,7 +111,7 @@
 
    .section-title a:hover{ color:var(--green); transition: .2s; }
    .section-title .star{ color: var(--green); margin-right:8px; }
-   .section-title h2{ font-size:36px; font-weight:500; color: var(--grey-light); }
+   .section-title h2{ font-size: 36px; font-weight:500; color: var(--grey-light); }
    .section-title a{ text-decoration:none; color:inherit; }
 
    /* Portfolio Grid */
@@ -121,7 +121,7 @@
    .project{ display:flex; flex-direction:column; gap:12px; cursor:pointer; }
    .project img{ transition:.4s; }
    .project:hover img{ transform: scale(1.04); }
-   .project h3{ font-size: 13px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+   .project h3{ font-size: 14px; font-weight:600; letter-spacing:.08em; margin-top:12px; text-transform:uppercase; }
 
    /* Media Ratio */
    .media--1x1 { aspect-ratio: 1/1; }
@@ -141,9 +141,8 @@
    /* About */
    .about{
       display:grid;
-      grid-template-columns:
-      1fr 1.2fr;
-      gap:80px;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 70px;
       align-items:start;
       }
    
@@ -173,8 +172,8 @@
    /* Experience */
    .brands{
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 72px;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 70px;
       align-items: center;
       }
    
@@ -207,14 +206,14 @@
       }
 
    .contact-content > div{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:24px 0;
+      display: grid;
+      grid-template-columns: 100px auto;
+      align-items: start;
+      padding: 8px 0;
       border-bottom:1px solid var(--grey-light);
       }
 
-   .contact p{
+   .contact p:first-child{
       font-weight: 600;
       color:var(--grey);
       }
