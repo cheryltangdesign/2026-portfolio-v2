@@ -118,10 +118,12 @@
    .work-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:24px; }
 
    /* Portfolio Grid */
-   .project{ display:flex; flex-direction:column; gap:12px; cursor:pointer; }
+   .work-grid{ display:flex; flex-direction:column; gap:12px; cursor:pointer; }
+   .project{ display: flex; flex-direction: column; gap: 12px; cursor: pointer; text-decoration: none; color: var(--grey); }
+   .project:hover { color: var(--green); }
    .project img{ transition:.4s; }
    .project:hover img{ transform: scale(1.04); }
-   .project h3{ font-size: 14px; font-weight:600; letter-spacing:.08em; margin-top:12px; text-transform:uppercase; }
+   .project h3{ font-size: 14px; font-weight:600; letter-spacing:.08em; margin-top:12px; text-transform:uppercase; color: inherit; }
 
    /* Media Ratio */
    .media--1x1 { aspect-ratio: 1/1; }
