@@ -233,6 +233,12 @@
    .contact-content a:hover{ color:var(--green); }
 
 
+   /* WORK PAGE */
+   .work-page {
+     padding-top: 100px;
+     padding-bottom: 140px;
+   }
+
    /* Footer */
    .site-footer {
      background: var(--white);
