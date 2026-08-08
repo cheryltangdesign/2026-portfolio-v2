@@ -116,7 +116,7 @@
 
    /* Portfolio Grid */
    .work-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:24px; }
-   .project{ display: flex; flex-direction: column; gap: 12px; cursor: pointer; text-decoration: none; color: var(--grey); }
+   .project{ display: flex; flex-direction: column; gap: 12px; cursor: pointer; text-decoration: none; color: var(--grey-light); }
    .project:hover { color: var(--green); }
    .project img{ transition:.4s; }
    .project:hover img{ transform: scale(1.04); }
