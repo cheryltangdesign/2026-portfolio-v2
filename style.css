@@ -96,8 +96,8 @@
       opacity: 0;
       transform: translateY(30px);
       transition:
-      opacity 0.8s ease,
-      transform 0.8s ease;   }
+      opacity 0.8s ease 0.15s,
+      transform 0.8s ease 0.15s;   }
 
    section:not(.hero).is-visible {
       opacity: 1;
