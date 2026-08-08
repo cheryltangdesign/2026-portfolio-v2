@@ -54,7 +54,7 @@
    section{ padding:var(--section) 0; }
 
    /* Nav */
-   header.container{ width: 90%; max-width: none; padding: 0 24px; }
+   header.container{ width: 95%; max-width: none; padding: 0 24px; }
    header{   
    position: sticky;
    top: 0;
@@ -271,7 +271,10 @@
 
 /* Responsive */
    @media(max-width:900px){
-   header.container { padding: 0 16px; }   
+   header.container { padding: 0 16px; }
+   nav { gap: 24px; }
+   nav a { font-size: 14px; }   
+      
    .work-grid{ grid-template-columns:1fr; }
    .about{ grid-template-columns:1fr; }
    .brands{ grid-template-columns:1fr; gap:40px; }
