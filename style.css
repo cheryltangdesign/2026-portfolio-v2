@@ -120,7 +120,7 @@
    .project:hover { color: var(--green); }
    .project img{ transition:.4s; }
    .project:hover img{ transform: scale(1.04); }
-   .project h3{ font-size: 16px; font-weight:600; letter-spacing:.08em; margin-top:12px; text-transform:uppercase; color: inherit; }
+   .project h3{ font-size: 16px; font-weight:600; letter-spacing:.08em; margin-top:12px; padding-left: 4px; text-transform:uppercase; color: inherit; }
 
    /* Media Ratio */
    .media--1x1 { aspect-ratio: 1/1; }
