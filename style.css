@@ -179,7 +179,7 @@
    .job div:nth-child(2){ text-align: left; }
    .job div:nth-child(3){ text-align: right; }
 
-   /* Experience */
+   /* Clients */
    .brands{
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -187,10 +187,7 @@
       align-items: center;
       }
 
-   .brands-content p{
-       margin: 0;
-       line-height: 1.7;
-   }
+   .brands-content p{ margin: 0; line-height: 1.7; }
 
    .brands-image{ overflow:hidden; }
 
@@ -213,14 +210,11 @@
        align-items: start;
    }
    
-   .contact-content{ max-width: 480px; }
+   .contact-content{ grid-column: 2; max-width: 480px; }
    
    .contact-content > div{ margin-bottom: 20px; }
    
-   .contact-content p{
-       margin: 0;
-       line-height: 1.7;
-   }
+   .contact-content p{ margin: 0; line-height: 1.7; }
    
    .contact-content p:first-child{
        font-weight:600;
@@ -231,9 +225,9 @@
    .contact-content a{
        text-decoration:none;
        color:var(--grey-dark);
-       font-size:15px;
-       line-height:1.7;
-       transition:.2s;
+       font-size: 15px;
+       line-height: 1.7;
+       transition: .2s;
    }
    
    .contact-content a:hover{ color:var(--green); }
