@@ -374,7 +374,7 @@
   gap: 24px;
   width: 98vw;
   margin-left: calc((100% - 98vw) / 2);
-  padding: 70px 0px; }
+  padding: 0 56px; }
 
 .project-navigation a {
   text-decoration: none;
@@ -492,7 +492,7 @@
    .project-section {
     grid-template-columns: 1fr;
     gap: 32px;
-    padding: 60px 0; }
+    padding: 0 16px; }
 
   .feature-row { grid-template-columns: 1fr; gap: 24px; }
   .feature-media { width: 100%; }   
