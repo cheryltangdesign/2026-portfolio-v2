@@ -54,7 +54,7 @@
    section{ padding:var(--section) 0; }
 
    /* Nav */
-   header.container{ width: 98%; max-width: none; padding: 0 48px; }
+   header.container{ width: 98%; max-width: none; padding: 0 56px; }
    header{   
    position: sticky;
    top: 0;
@@ -171,7 +171,7 @@
       grid-template-columns: 1fr 1.2fr 1fr;
       align-items: center;
       gap: 40px;
-      padding: 24px 0;
+      padding: 24px 12px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       }
 
