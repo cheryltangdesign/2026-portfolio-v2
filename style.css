@@ -329,7 +329,7 @@
   font-size: 18px;
   font-weight: 500;
   color: var(--grey-light); }
-.project-section-title .star { color: var(--green); margin-right: 8px; }
+.project-section-title h2 .star { color: var(--green); margin-right: 8px; }
 .project-section-text { max-width: 480px; }
 .project-section-text p { margin-bottom: 20px; }
 
