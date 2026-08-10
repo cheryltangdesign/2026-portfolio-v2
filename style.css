@@ -83,7 +83,6 @@
    .logo {
      display: flex;
      align-items: center;
-     white-space: nowrap;
      font-size: 16px;
      font-weight: 600;
      line-height: 1; }
@@ -92,7 +91,7 @@
    .logo a:visited,
    .logo a:active { color: var(--dark); text-decoration: none; }
    
-   .logo-project { color: var(--grey-light); font-weight: 500; }
+   .logo-project { color: var(--grey-light); font-weight: 400; }
    
    .logo a:hover { color: var(--green); }
 
