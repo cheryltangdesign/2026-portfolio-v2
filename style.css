@@ -91,7 +91,7 @@
    .logo a:visited,
    .logo a:active { color: var(--dark); text-decoration: none; }
    
-   .logo-project { color: var(--grey-light); font-weight: 400; }
+   .logo-project { color: var(--grey-light); font-weight: 500; }
    
    .logo a:hover { color: var(--green); }
 
