@@ -12,249 +12,711 @@
 
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
-<body>
+<body id="top">
 
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a class="brand" href="index.html" data-label="CT" aria-label="Cheryl Tang — home">
-        <img src="images/logo.png" alt="Cheryl Tang">
-      </a>
-      <nav class="nav" aria-label="Main">
-        <a class="nav__link is-active" href="index.html" aria-current="page">Work</a>
-        <a class="nav__link" href="more.html">More</a>
-        <a class="nav__link" href="about.html">About</a>
-      </nav>
-    </div>
-  </header>
+<header class="header-inner container">
+   <a class="logo" href="index.html">Cheryl Tang // Active Head Tracker</a>
+   <nav>
+      <a href="#work">Work</a>
+       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+   </nav>
+</header>
 
   <main class="project">
 
-    <!-- Hero -->
-    <div class="ph project-hero">
-      <img src="images/sandbox-vr/hero.jpg" alt="Player wearing the Sandbox VR active head tracker">
-      <div class="project-hero__copy">
-        <h1 class="project-hero__title">SANDBOX VR</h1>
-        <p class="project-hero__subtitle">ACTIVE HEAD TRACKER</p>
-      </div>
-      <div class="project-hero__tools">
-        <img src="images/tools/solidworks.png" alt="SolidWorks">
-        <img src="images/tools/keyshot.png" alt="KeyShot">
-        <img src="images/tools/Adobe-PS.png" alt="Adobe Photoshop">
-        <img src="images/tools/Adobe-AI.png" alt="Adobe Illustrator">
-      </div>
+    
+<!-- ======================================================
+     PROJECT HERO
+====================================================== -->
+
+<section class="project-hero">
+
+  <div class="container">
+
+    <div class="project-hero__image media--2x1">
+
+      <img
+        src="images/01 ATH/ATH_hero.jpg"
+        alt="Sandbox VR Active Head Tracker"
+      >
+
     </div>
 
-    <!-- One-line summary -->
-    <section class="panel panel--grey">
-      <div class="section-head">
-        <p class="section-head__sub">An active infrared-trackable VR headmount that utilises active markers for low-latency player head motion capture.</p>
-      </div>
-    </section>
-    
-    <!-- Moodboard -->
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <h2 class="section-head__title">Moodboard</h2>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">Futuristic &ndash; Cyberpunk &ndash; Sleek &ndash; Rugged &ndash; Durable</p>
-      </div>
-    </section>
-    
-    <div class="ph">
-      <img src="images/sandbox-vr/moodboard.jpg" alt="Moodboard collage of rugged, cyberpunk product references">
-    </div>
+  </div>
 
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <p class="section-head__sub">A rugged construction is designed to withstand high-impact experiences.</p>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">The combination of matte and glossy finishes, accented by illuminated coloured player LED strips, creates a high-tech and futuristic aesthetic.</p>
-      </div>
-    </section>
+</section>
 
-    <div class="media-row media-row--wide-narrow">
-      <div class="ph">
-        <img src="images/sandbox-vr/sketches.jpg" alt="Concept sketch sheets for the head tracker">
-      </div>
-      <div class="ph">
-        <img src="images/sandbox-vr/models.jpg" alt="Shelf of 3D-printed appearance models">
-      </div>
-    </div>
-   
-    <!-- Low latency streaming -->
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <h2 class="section-head__title">Low latency streaming</h2>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">Active IR tracking solution improves tracking accuracy and enables lower-latency motion capture for fast-paced VR experiences. It also delivers more reliable performance in large multiplayer arenas, with fewer tracking dropouts and less interference from ambient lighting.</p>
-      </div>
-    </section>
 
-    <section class="panel panel--dark bleed-top bleed-bottom">
-      <div class="ph media--diagram media--2x1">
-        <img src="images/sandbox-vr/diagram-tracking.jpg" alt="Diagram comparing passive IR tracking with active IR tracking">
-      </div>
-    </section>
-    
-    <!-- Wireless solution -->
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <h2 class="section-head__title">Wireless solution</h2>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">Upgraded from bucky tethered gaming PC backpacks to standalone wireless headsets, enables true free-roam movements and a more immersive gameplay experience, so as to minimise motion sickness for players.</p>
-      </div>
-    </section>
+<!-- ======================================================
+     01 OVERVIEW
+====================================================== -->
 
-    <section class="panel panel--dark">
-      <div class="ph media--diagram media--2x1 bleed-top bleed-bottom">
-        <img src="images/sandbox-vr/diagram-wireless.jpg" alt="Diagram comparing a tethered backpack setup with a standalone wireless headset">
-      </div>
-    </section>
+<section class="project-section">
 
-    <!-- Vive Focus 3 integration -->
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <h2 class="section-head__title">Vive Focus 3</h2>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">The Active Head Tracker is designed to integrate seamlessly with the HTC Vive Focus 3 without compromising its performance, comfort, or usability.</p>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub"> To deliver a reliable and smooth product lifecycle &ndash; deployment &gt; gear on &gt; in-game experience &gt; gear off &gt; charging &gt; cleaning &gt; maintenance for both users and operators.</p>
-      </div>
+  <div class="container">
 
-      <!-- Features -->
-      <div class="feature-grid">
+    <div class="project-section__inner">
 
-        <article class="feature">
-          <div class="ph feature__media">
-            <img src="images/sandbox-vr/feature-internals.jpg" alt="HTC Vive Focus 3 with its housing removed, showing internal components">
-          </div>
-          <h3 class="feature__title">Internal components</h3>
-          <p class="feature__body">Designed around critical components of the HTC Vive Focus 3, such as antenna, cooling fan, and microphones, ensuring both mechanical and electrical compatibility between products.</p>
-        </article>
+      <div class="project-copy">
 
-        <article class="feature">
-          <div class="ph feature__media">
-            <img src="images/sandbox-vr/feature-quick-mount.jpg" alt="Spring and hook attachment system on the headset">
-          </div>
-          <h3 class="feature__title">Quick mount</h3>
-          <p class="feature__body">Developed a spring- and hook-based attachment system for secure mounting, enabling a fast, tool-free installation onto the HTC Vive Focus 3.</p>
-        </article>
+        <div class="section-title">
 
-        <article class="feature">
-          <div class="ph feature__media">
-            <img src="images/sandbox-vr/feature-power.jpg" alt="Power connection detail on the headset">
-          </div>
-          <h3 class="feature__title">Power supply</h3>
-          <p class="feature__body">Powered directly by HTC Vive Focus 3, eliminating the need for a separate battery and external charging system, while minimising over product weight.</p>
-        </article>
+          <h2>
+            <span class="star">✦</span>
+            01 Overview
+          </h2>
 
-        <article class="feature">
-          <div class="ph feature__media">
-            <img src="images/sandbox-vr/feature-audio.jpg" alt="Audio cable routed along the headset strap">
-          </div>
-          <h3 class="feature__title">Audio cable routing</h3>
-          <p class="feature__body">Implemented an audio connection system between the HTC Vive Focus 3 and headphone with efficient cable management, allowing all components to work as a set.</p>
-        </article>
-
-        <article class="feature">
-          <div class="ph feature__media">
-            <img src="images/sandbox-vr/feature-face-shield.jpg" alt="Silicone face shield wrapped around the magnetic face cushion">
-          </div>
-          <h3 class="feature__title">Silicone face shield</h3>
-          <p class="feature__body">Designed to wrap around the magnetic face cushion, enabling easy removal for cleaning and improved hygiene.</p>
-        </article>
-
-        <article class="feature">
-          <div class="ph feature__media">
-            <img src="images/sandbox-vr/feature-lens.jpg" alt="Prescription lens inserts fitted inside the headset">
-          </div>
-          <h3 class="feature__title">Shortsighted lens</h3>
-          <p class="feature__body">Custom prescription lens inserts for the headset, enhancing comfort and visual clarity for nearsighted users.</p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Quality testing -->
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <h2 class="section-head__title">Quality testing</h2>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">Worked closely with hardware engineers to design unique marker patterns for different players.</p>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">The parameters of active LEDs were extensively tested and optimized in real in-store environments, which significantly improved detection accuracy and tracking stability under varying lighting conditions.</p>
-      </div>
-    </section>
-
-    <section class="panel panel--dark">
-      <div class="media-row media-row--2 bleed-top bleed-bottom">
-        <div class="ph media--4x5">
-          <img src="images/sandbox-vr/testing-rig.jpg" alt="Prototype head tracker under test next to a laptop">
         </div>
-        <div class="ph media--4x5">
-          <img src="images/sandbox-vr/testing-leds.jpg" alt="LED wavelength and beam angle test board">
+
+        <p>
+          My goal was to design a compact and comfortable
+          active head tracker that could be integrated into
+          Sandbox VR's immersive gaming system.
+        </p>
+
+        <p>
+          The design needed to support accurate tracking
+          while remaining comfortable, durable and visually
+          consistent with the Sandbox VR ecosystem.
+        </p>
+
+
+        <!-- TOOL BOX -->
+
+        <div class="tool-box">
+
+          <div class="tool-box__title">
+            Tools
+          </div>
+
+          <div class="tool-box__list">
+
+            <div class="tool">
+              <img
+                src="images/tools/solidworks.png"
+                alt="SolidWorks"
+                title="SolidWorks"
+              >
+            </div>
+
+            <div class="tool">
+              <img
+                src="images/tools/keyshot.png"
+                alt="KeyShot"
+                title="KeyShot"
+              >
+            </div>
+
+            <div class="tool">
+              <img
+                src="images/tools/photoshop.png"
+                alt="Photoshop"
+                title="Photoshop"
+              >
+            </div>
+
+            <div class="tool">
+              <img
+                src="images/tools/illustrator.png"
+                alt="Illustrator"
+                title="Illustrator"
+              >
+            </div>
+
+          </div>
+
         </div>
-      </div>
-    </section>
 
-    <!-- CMF -->
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <h2 class="section-head__title">CMF selection</h2>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">Darkened IR-transmitting polycarbonate is selected for its high impact strength and heat resistance, while effectively concealing the internal components.</p>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">A glossy surface finish to minimise IR refraction, hence maximising transmission efficiency.</p>
       </div>
-    </section>
 
-    <section class="panel panel--dark">
-      <div class="ph media--2x1 bleed-top bleed-bottom">
-        <img src="images/sandbox-vr/cmf.gif" alt="Underside of the head tracker with illuminated player LEDs">
-      </div>
-    </section>
 
-    <!-- UI -->
-    <section class="panel panel--dark">
-      <div class="section-head">
-        <h2 class="section-head__title">Easily Accessible UI</h2>
-        <p class="section-head__sub"><br></p>
-        <p class="section-head__sub">Allows quick control and instant status check for store staff</p>
-      </div>
-    </section>
+      <div class="project-media">
 
-    <section class="panel panel--dark">
-      <div class="ph media--diagram media--2x1 bleed-top">
-        <img src="images/sandbox-vr/ui-callouts.jpg" alt="Annotated control panel showing player ID, status LED indicator, and player switching button">
-      </div>
-    </section>
+        <div class="media--4x3">
+          <img
+            src="images/01 ATH/ATH_overview.jpg"
+            alt="Active Head Tracker overview"
+            loading="lazy"
+          >
+        </div>
 
-    <!-- Full set -->
-    <section class="panel">
-      <div class="section-head">
-        <h2 class="section-head__title">Full set</h2>
       </div>
-    </section>
 
-      <div class="ph media--4x3">
-        <img src="images/sandbox-vr/full-set.jpg" alt="Complete set: active head tracker, silicone face shield, headphone, and audio spiral cable">
-      </div>
-    
-    <!-- In context -->
-    <section class="panel">
-      <div class="section-head">
-        <h2 class="section-head__title">In context visuals</h2>
-      </div>
-    
-      <div class="context-stack bleed bleed-bottom">
-        <div class="ph media--4x3"><img src="images/sandbox-vr/context-1.jpg" alt="Head trackers charging on a store rack"></div>
-        <div class="ph media--4x3"><img src="images/sandbox-vr/context-2.jpg" alt="Store staff fitting a headset onto a player"></div>
-        <div class="ph media--3x2"><img src="images/sandbox-vr/context-3.jpg" alt="Players gearing up before a session"></div>
-        <div class="ph media--4x3"><img src="images/sandbox-vr/context-4.jpg" alt="Players mid-game wearing the head trackers"></div>
-      </div>
-    </section>
+    </div>
 
-  </main>
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     02 MOODBOARD
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            02 Moodboard
+          </h2>
+
+        </div>
+
+        <p>
+          The exploration of form and visual direction
+          focused on creating a compact, technical and
+          approachable object.
+        </p>
+
+        <p>
+          Different references were explored to establish
+          the visual language and interaction principles
+          for the product.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_moodboard.jpg"
+            alt="Active Head Tracker moodboard"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     03 SKETCHES & PROTOTYPES
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            03 Sketches & Prototypes
+          </h2>
+
+        </div>
+
+        <p>
+          Early sketches explored different mounting
+          approaches, proportions and interaction points.
+        </p>
+
+        <p>
+          Physical prototypes were then used to evaluate
+          the form and positioning of the tracker.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_sketches.jpg"
+            alt="Active Head Tracker sketches and prototypes"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     04 VIVE FOCUS
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            04 Vive Focus 3
+          </h2>
+
+        </div>
+
+        <p>
+          The tracker was developed around the Vive Focus 3,
+          considering the headset geometry, mounting position
+          and user comfort.
+        </p>
+
+        <p>
+          Multiple iterations were tested to determine the
+          most effective placement and attachment strategy.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--2x1">
+
+          <img
+            src="images/01 ATH/ATH_vive-focus.jpg"
+            alt="Active Head Tracker Vive Focus 3 development"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="media--2x1">
+
+          <img
+            src="images/01 ATH/ATH_vive-focus-02.jpg"
+            alt="Active Head Tracker Vive Focus 3 iterations"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     05 FEATURES
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            05 Features
+          </h2>
+
+        </div>
+
+        <p>
+          The final concept incorporated several key
+          features designed to improve comfort, stability
+          and ease of use.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_features.jpg"
+            alt="Active Head Tracker features"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     06 QUALITY TESTING
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            06 Quality Testing
+          </h2>
+
+        </div>
+
+        <p>
+          Testing focused on fit, durability and the
+          reliability of the tracking system during
+          repeated use.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_testing.jpg"
+            alt="Active Head Tracker quality testing"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     07 CLIP SELECTION
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            07 Clip Selection
+          </h2>
+
+        </div>
+
+        <p>
+          Different clip configurations were evaluated
+          to determine the most secure and practical
+          mounting solution.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--2x1">
+
+          <img
+            src="images/01 ATH/ATH_clip.jpg"
+            alt="Active Head Tracker clip selection"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     08 ACCESSIBLE UI
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            08 Accessible UI
+          </h2>
+
+        </div>
+
+        <p>
+          The physical interface and interaction points
+          were refined to make the product intuitive and
+          accessible during use.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--2x1">
+
+          <img
+            src="images/01 ATH/ATH_ui.jpg"
+            alt="Active Head Tracker accessible interface"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     09 FINAL DESIGN
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            09 Final Design
+          </h2>
+
+        </div>
+
+        <p>
+          The final design combines the tracking hardware
+          with a lightweight mounting system designed for
+          comfort, stability and repeatable use.
+        </p>
+
+        <ul>
+          <li>Compact form factor</li>
+          <li>Secure head mounting</li>
+          <li>Comfortable fit</li>
+          <li>Integrated tracking hardware</li>
+          <li>Production-ready construction</li>
+        </ul>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_final.jpg"
+            alt="Final Active Head Tracker design"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     10 CONTEXT VISUALS
+====================================================== -->
+
+<section class="project-section">
+
+  <div class="container">
+
+    <div class="project-section__inner">
+
+      <div class="project-copy">
+
+        <div class="section-title">
+
+          <h2>
+            <span class="star">✦</span>
+            10 In Context
+          </h2>
+
+        </div>
+
+        <p>
+          The final product was developed for use within
+          Sandbox VR's immersive entertainment environment.
+        </p>
+
+        <p>
+          These visuals show the product being used in
+          real-world gaming environments.
+        </p>
+
+      </div>
+
+
+      <div class="project-media">
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_context-01.jpg"
+            alt="Active Head Tracker in Sandbox VR"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_context-02.jpg"
+            alt="Active Head Tracker being used in context"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_context-03.jpg"
+            alt="Sandbox VR player using Active Head Tracker"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="media--4x3">
+
+          <img
+            src="images/01 ATH/ATH_context-04.jpg"
+            alt="Sandbox VR players using Active Head Tracker"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================================
+     PROJECT NAVIGATION
+====================================================== -->
+
+<section class="container">
+
+  <div class="project-navigation">
+
+    <a href="work.html">
+      ← All Work
+    </a>
+
+    <a href="sandbox-vr-limbs-tracker.html">
+      Next Project →
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+<!-- ======================================================
+     BACK TO TOP
+====================================================== -->
+
+<a
+  href="#top"
+  class="back-to-top"
+  aria-label="Back to top"
+>
+  ↑
+</a>
+
+
+<script src="main.js"></script>
+
+</body>
+
+</html>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
