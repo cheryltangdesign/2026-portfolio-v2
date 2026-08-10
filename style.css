@@ -132,7 +132,8 @@
 
    .section-title a:hover{ color:var(--green); transition: .2s; }
    .section-title .star{ color: var(--green); margin-right: 8px; }
-   .section-title h2{ font-size: 36px; font-weight: 500; color: var(--grey-light); }
+   .section-title h2,
+   .project .section-title h2 { font-size: 36px; font-weight: 500; color: var(--grey-light); }
    .section-title a{ text-decoration:none; color:inherit; }
 
    /* Portfolio Grid */
