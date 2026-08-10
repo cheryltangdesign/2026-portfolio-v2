@@ -355,7 +355,7 @@
 
 /* Features */
 
-.features { display: grid; gap: 24px; }
+.features { display: grid; gap: 40px; }
 .feature-row {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
