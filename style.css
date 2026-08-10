@@ -503,12 +503,14 @@
     gap: 32px;
     padding: 60px 0; }
 
+  .feature-row { grid-template-columns: 1fr; gap: 24px; }
+  .feature-media { width: 100%; }   
+      
   .back-to-top {
     right: 16px;
     bottom: 16px;
     width: 40px;
-    height: 40px;
-  }
+    height: 40px; }
  
   .site-footer__links { grid-template-columns: 1fr; gap: 8px; }
       
