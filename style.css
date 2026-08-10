@@ -324,12 +324,11 @@
 .project-section:first-child { padding-top: 0; }
 .project-section:last-child { border-bottom: none;}
 
-.project-section-info { align-self: start; }
 .project-section-title {
   margin-bottom: 12px;
   font-size: 18px;
   font-weight: 500;
-  color: var(--grey); }
+  color: var(--grey-light); }
 .project-section-title .star { color: var(--green); margin-right: 8px; }
 .project-section-text { max-width: 480px; }
 .project-section-text p { margin-bottom: 20px; }
