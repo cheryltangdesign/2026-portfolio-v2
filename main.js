@@ -45,3 +45,19 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+
+/* Set Project Title to 10% of banner height */
+
+function sizeProjectHeroTitle() {
+  const hero = document.querySelector('.project-hero');
+  const title = document.querySelector('.project-hero-content h1');
+
+  if (!hero || !title) return;
+
+  // Font height = 10% of banner height
+  title.style.fontSize = `${hero.offsetHeight * 0.10}px`;
+}
+
+window.addEventListener('load', sizeProjectHeroTitle);
+window.addEventListener('resize', sizeProjectHeroTitle);
