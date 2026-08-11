@@ -301,21 +301,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: var(--white); }
+  color: var(--grey-light); }
 
 .project-hero-meta p {
   display: flex;
   flex-direction: column;
   font-size: clamp(10px, 3vw, 16px);
   line-height: 1.6;
-  font-weight: 300;
-  text-transform: uppercase; }
+  font-weight: 300; }
 
 /* Tools */
 .tool-box {
   display: flex;
   align-items: center;
-  gap: 8px; }
+  padding-top: 4px;
+  gap: 20px; }
 
 .tool {
   display: block;
