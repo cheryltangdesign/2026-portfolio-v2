@@ -366,8 +366,7 @@
 .features {
   display: grid;
   gap: 40px;
-  padding: 0;
-  border-bottom: 1px solid rgba(0,0,0,0.2); }
+  padding: 0; }
 .feature-row {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
