@@ -259,7 +259,7 @@
 .project-hero {
   position: relative;
   width: 100%;
-  margin-left: calc(50% - 50vw)
+  margin-left: calc(50% - 50vw);
   aspect-ratio: 2 / 1;
   overflow: hidden; }
 
