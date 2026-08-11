@@ -524,7 +524,7 @@ section:not(.hero):not(.project-hero).is-visible {
     transform: none;
     width: auto;
     max-width: 80%; }
-  .project-hero-content h1 { font-size: 32px; margin-bottom: 12px; }
+  .project-hero-content h1 { margin-bottom: 12px; }
   .project-hero-content p { font-size: 12px; }
       
   .project-hero-meta {
