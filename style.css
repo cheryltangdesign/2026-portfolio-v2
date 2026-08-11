@@ -304,12 +304,12 @@
   gap: 16px;
   color: var(--white); }
 
-.project-meta-text {
+.project-hero-meta p {
   display: flex;
   flex-direction: column;
   font-size: clamp(10px, 3vw, 16px);
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 300;
   text-transform: uppercase; }
 
 /* Tools */
