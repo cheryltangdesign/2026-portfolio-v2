@@ -301,7 +301,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
   color: var(--white); }
 
 .project-hero-meta p {
