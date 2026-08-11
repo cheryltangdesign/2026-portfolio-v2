@@ -260,6 +260,7 @@
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  padding: 0;
   overflow: hidden; }
 
 .project-hero > img {
@@ -273,35 +274,62 @@
 .project-hero-content {
   position: absolute;
   left: clamp(24px, 5vw, 80px);
-  top: 50%;
-  transform: translateY(-50%);
+  top: clamp(32px, 5vw, 72px);
   max-width: 420px;
   color: var(--white);
   z-index: 2; }
 
 .project-hero-content h1 {
+  margin: 0 0 20px;
   font-size: clamp(32px, 4vw, 64px);
   line-height: 1;
   font-weight: 500;
-  margin-bottom: 24px;
   text-transform: uppercase; }
 
 .project-hero-content p {
+  margin: 0 0 28px;
   font-size: 14px;
-  line-height: 1.6;
-  max-width: 360px; }
+  line-height: 1.6; }
+
+/* Role / Timeline */
+.project-meta {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.4; }
+
+.project-meta > div {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 12px; }
+
+.project-meta-label { color: rgba(255, 255, 255, 0.55); }
+
+.project-meta-value { color: var(--white); }
 
 /* Tool box */
 .project-tools {
   position: absolute;
   right: clamp(24px, 5vw, 80px);
-  bottom: clamp(24px, 5vw, 60px);
+  bottom: clamp(24px, 4vw, 60px);
   z-index: 3;
   display: flex;
   align-items: center;
   gap: 12px; }
 
-.tool img { width: 100%; height: 100%; object-fit: cover; }
+.project-tools-title {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6); }
+
+.tool-box { display: flex; gap: 8px; }
+
+.tool {
+  display: block;
+  width: 36px;
+  height: 36px;
+  overflow: hidden; }
+
+.tool img { width: 100%; height: 100%; object-fit: contain; }
 
 
 /* Project information */
