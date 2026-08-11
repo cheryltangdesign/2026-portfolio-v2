@@ -324,10 +324,11 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 60px;
-  padding: 0 0 80px;
-  border-bottom: 1px solid rgba(0,0,0,0.2); }
+  padding: 0; }
 
-.project-section-final { border-bottom: none; }
+.project-section-border {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding-bottom: 20px; }
 
 .project-section-title { margin-bottom: 40px; }
 .project-section-title h2 .star { color: var(--green); margin-right: 8px; }
