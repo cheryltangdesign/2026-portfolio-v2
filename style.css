@@ -370,7 +370,7 @@
   padding: 0; }
 .feature-row {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: 1fr 1.6fr;
   gap: 60px;
   align-items: start; }
 .feature-media { width: 100%; }
