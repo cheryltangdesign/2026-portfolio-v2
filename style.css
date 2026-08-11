@@ -274,7 +274,7 @@
 .project-hero-content {
   position: absolute;
   left: clamp(24px, 5vw, 80px);
-  top: 50%;
+  top: clamp(24px, 4vw, 60px);
   transform: translateY(-50%);
   width: min(420px, 40%);
   z-index: 2;
