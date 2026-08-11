@@ -531,14 +531,10 @@ section:not(.hero):not(.project-hero).is-visible {
     left: 24px;
     bottom: 24px;
     gap: 14px; }
-
-  .project-meta-label { font-size: 10px; }
-  .project-meta-value { font-size: 12px; }
-      
+   
   .tool-box { gap: 6px; }
-  .tool { width: 26px; height: 26px; }
 
-   .project-section {
+  .project-section {
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 0; }
