@@ -279,7 +279,8 @@
   z-index: 2; }
 
 .project-hero-content h1 {
-  font-size: clamp(32px, 4vw, 64px);
+  white-space: nowrap;
+  font-size: clamp(20px, 6vw, 48px);
   line-height: 1;
   font-weight: 500;
   margin-bottom: 24px;
