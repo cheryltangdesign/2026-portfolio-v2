@@ -324,7 +324,7 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 60px;
-  padding: 80px 0;
+  padding: 40px 0;
   border-bottom: 1px solid rgba(0,0,0,0.2); }
 
 .project-section:first-child { padding-top: 0; }
@@ -499,7 +499,7 @@
    .project-section {
     grid-template-columns: 1fr;
     gap: 32px;
-    padding: 0 16px; }
+    padding: 0; }
 
   .feature-row { grid-template-columns: 1fr; gap: 24px; }
   .feature-media { width: 100%; }   
