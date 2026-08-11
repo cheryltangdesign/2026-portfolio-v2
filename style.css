@@ -319,6 +319,7 @@
 
 /* Project information */
 
+.project-container { width: min(1400px, 92%); margin: auto; }
 .project-content { padding-bottom: 0px; }
 .project-section {
   display: grid;
