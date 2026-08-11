@@ -280,7 +280,7 @@
 
 .project-hero-content h1 {
   white-space: nowrap;
-  font-size: clamp(20px, 6vw, 48px);
+  font-size: 10vw;
   line-height: 1;
   font-weight: 500;
   margin-bottom: 24px;
