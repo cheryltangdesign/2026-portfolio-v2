@@ -324,13 +324,10 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 60px;
-  padding: 20px 0;
+  padding: 0 0 80px;
   border-bottom: 1px solid rgba(0,0,0,0.2); }
 
-.project-section:first-child { padding-top: 0; }
-/*.project-section:last-child { border-bottom: none;}*/
-
-.project-section-title { margin-bottom: 12px; }
+.project-section-title { margin-bottom: 40px; }
 .project-section-title h2 .star { color: var(--green); margin-right: 8px; }
 .project-section-title h2 { color: var(--grey-light); }
 
@@ -361,7 +358,7 @@
 
 /* Features */
 
-.features { display: grid; gap: 40px; }
+.features { display: grid; gap: 40px; padding: 0; }
 .feature-row {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
