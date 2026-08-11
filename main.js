@@ -49,15 +49,33 @@ sections.forEach((section) => {
 
 /* Set Project Title to 10% of banner height */
 
-function sizeProjectHeroTitle() {
-  const hero = document.querySelector('.project-hero');
-  const title = document.querySelector('.project-hero-content h1');
+function sizeProjectHeroElements() {
+  const hero = document.querySelector(".project-hero");
 
-  if (!hero || !title) return;
+  if (!hero) return;
 
-  // Font height = 10% of banner height
-  title.style.fontSize = `${hero.offsetHeight * 0.10}px`;
+  const heroHeight = hero.offsetHeight;
+
+  // Title = 10% of banner height
+  const title = hero.querySelector(".project-hero-content h1");
+  if (title) {
+    title.style.fontSize = `${heroHeight * 0.10}px`;
+  }
+
+  // Bottom metadata text = 3% of banner height
+  const meta = hero.querySelector(".project-hero-meta");
+  if (meta) {
+    meta.style.fontSize = `${heroHeight * 0.03}px`;
+  }
+
+  // Tool icons = 5% of banner height
+  const tools = hero.querySelectorAll(".tool");
+  tools.forEach((tool) => {
+    const size = heroHeight * 0.05;
+    tool.style.width = `${size}px`;
+    tool.style.height = `${size}px`;
+  });
 }
 
-window.addEventListener('load', sizeProjectHeroTitle);
-window.addEventListener('resize', sizeProjectHeroTitle);
+window.addEventListener("load", sizeProjectHeroElements);
+window.addEventListener("resize", sizeProjectHeroElements);
