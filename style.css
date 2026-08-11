@@ -289,6 +289,7 @@
 
 .project-hero-description {
   font-size: clamp(10px, 3vw, 16px);
+  font-weight: 300;
   line-height: 1.6;
   max-width: 360px;
   color: var(--bg); }
