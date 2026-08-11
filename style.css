@@ -114,11 +114,11 @@
       transform: translateY(30px);
       transition:
       opacity 0.8s ease 0.15s,
-      transform 0.8s ease 0.15s;   }
+      transform 0.8s ease 0.15s; }
 
    section:not(.hero).is-visible {
       opacity: 1;
-      transform: translateY(0);   }
+      transform: translateY(0); }
 
    .section-title{
       display: flex;
@@ -338,6 +338,16 @@
   height: 100%;
   object-fit: contain; }
 
+section:not(.hero):not(.project-hero) {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease 0.15s,
+    transform 0.8s ease 0.15s; }
+
+section:not(.hero):not(.project-hero).is-visible {
+  opacity: 1;
+  transform: translateY(0); }
 
 /* Project information */
 
