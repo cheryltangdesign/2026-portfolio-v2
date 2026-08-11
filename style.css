@@ -276,12 +276,12 @@
   left: clamp(24px, 5vw, 80px);
   top: clamp(32px, 5vw, 72px);
   max-width: 420px;
-  color: var(--white);
-  z-index: 2; }
+    z-index: 2; }
 
 .project-hero-content h1 {
   margin: 0 0 20px;
   font-size: clamp(32px, 4vw, 64px);
+  color: var(--white);
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase; }
@@ -289,6 +289,7 @@
 .project-hero-content p {
   margin: 0 0 28px;
   font-size: 14px;
+  color: var(--grey-light); 
   line-height: 1.6; }
 
 /* Role / Timeline */
