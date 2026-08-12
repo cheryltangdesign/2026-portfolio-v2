@@ -273,7 +273,8 @@
 .project-hero > img {
   display: block;
   width: 96%;
-  object-fit: cover;
+  height: auto; 
+  object-fit: contain;
   object-position: center; }
 
 /* Project hero title + description */
