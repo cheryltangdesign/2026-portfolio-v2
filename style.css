@@ -270,15 +270,15 @@
 
 .project-hero > img {
   display: block;
-  width: 98%;
-  height: 98%;
+  width: 95%;
+  height: 95%;
   object-fit: cover;
   object-position: center; }
 
 /* Project hero title + description */
 .project-hero-content {
   position: absolute;
-  left: 6cqh;
+  left: 8cqh;
   top: 5cqh;
   width: min(420px, 40%);
   z-index: 2; }
@@ -289,7 +289,7 @@
   line-height: 1.6;
   font-weight: 500;
   margin-bottom: 3cqh;
-  color: var(--white); 
+  color: var(--bg); 
   text-transform: uppercase; }
 
 .project-hero-description {
@@ -302,7 +302,7 @@
 /* Hero metadata */
 .project-hero-meta {
   position: absolute;
-  left: 6cqh;
+  left: 8cqh;
   bottom: 6cqh;
   z-index: 3;
   display: flex;
