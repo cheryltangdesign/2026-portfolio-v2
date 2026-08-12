@@ -279,7 +279,7 @@
 /* Project hero title + description */
 .project-hero-content {
   position: absolute;
-  left: 10cqh;
+  left: 8cqh;
   top: 5cqh;
   width: min(420px, 40%);
   z-index: 2; }
@@ -303,7 +303,7 @@
 /* Hero metadata */
 .project-hero-meta {
   position: absolute;
-  left: 10cqh;
+  left: 8cqh;
   bottom: 6cqh;
   z-index: 3;
   display: flex;
