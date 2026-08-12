@@ -293,7 +293,7 @@
   font-size: 2.2cqh;
   font-weight: 300;
   line-height: 1.4;
-  max-width: 400px;
+  width: 30cqh;
   color: var(--bg); }
 
 /* Hero metadata */
