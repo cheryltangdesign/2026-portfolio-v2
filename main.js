@@ -48,7 +48,6 @@ sections.forEach((section) => {
 
 
 /* Set Project Title to 10% of banner height */
-
 function sizeProjectHeroElements() {
   const hero = document.querySelector(".project-hero");
 
@@ -60,14 +59,42 @@ function sizeProjectHeroElements() {
   const title = hero.querySelector(".project-hero-content h1");
   if (title) {
     title.style.fontSize = `${heroHeight * 0.10}px`;
+    title.style.marginBottom = `${heroHeight * 0.03}px`;
   }
 
+/* HERO CONTENT POSITION */
+  const content = hero.querySelector(".project-hero-content");
+  if (content) {
+    // Left and top position = 5% of banner height
+    content.style.left = `${heroHeight * 0.05}px`;
+    content.style.top = `${heroHeight * 0.05}px`;
+  }
+
+  /* HERO DESCRIPTION */
+  const description = hero.querySelector(".project-hero-description");
+  if (description) {
+    // Description font = 3% of banner height
+    description.style.fontSize = `${heroHeight * 0.03}px`;
+  }
+   
   // Bottom metadata text = 3% of banner height
   const meta = hero.querySelector(".project-hero-meta");
   if (meta) {
+    meta.style.left = `${heroHeight * 0.05}px`;
+    meta.style.bottom = `${heroHeight * 0.05}px`;
     meta.style.fontSize = `${heroHeight * 0.03}px`;
+    meta.style.gap = `${heroHeight * 0.02}px`;
   }
 
+  /* TOOL BOX */
+  const toolBox = hero.querySelector(".tool-box");
+  if (toolBox) {
+    // Space between "Tools" and icons
+    toolBox.style.paddingTop = `${heroHeight * 0.01}px`;
+    // Space between icons
+    toolBox.style.gap = `${heroHeight * 0.04}px`;
+  }
+   
   // Tool icons = 5% of banner height
   const tools = hero.querySelectorAll(".tool");
   tools.forEach((tool) => {
