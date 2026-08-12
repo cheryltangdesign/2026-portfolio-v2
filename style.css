@@ -370,6 +370,27 @@ section:not(.hero):not(.project-hero).is-visible {
 .project-section-media { width: 100%; }
 .project-section-media > * + * { margin-top: 24px; }
 
+/* Two images side by side, with captions underneath */
+.project-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start; }
+
+.project-media-grid figure { margin: 0; min-width: 0; }
+
+.project-media-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; }
+
+.project-media-grid figcaption {
+  margin-top: 12px;
+  color: var(--grey-light);
+  font-size: var(--small);
+  line-height: 1.5; }
+
 .project .section-title { margin-bottom: 12px; }
 
 /* Image Groups */
@@ -532,7 +553,9 @@ section:not(.hero):not(.project-hero).is-visible {
   .feature-row { grid-template-columns: 1fr; gap: 24px; }
   .feature-media { width: 100%; }   
 
-   .project-navigation {
+  .project-media-grid { grid-template-columns: 1fr; gap: 32px; }
+      
+  .project-navigation {
     width: 98vw;
     margin-left: calc((100% - 98vw) / 2);
     padding: 50px 0px; }
