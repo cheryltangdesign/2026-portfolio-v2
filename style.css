@@ -365,7 +365,11 @@ section:not(.hero):not(.project-hero).is-visible {
 .project-section-title h2 { color: var(--grey-light); }
 
 .project-section-text { max-width: 480px; }
-.project-section-text p { margin-bottom: 20px; }
+.project-section-text p {
+  margin-bottom: 20px;
+  color: var(--grey);
+  font-size: var(--body);
+  line-height: 1.5; }
 
 .project-section-media {
   width: 100%;
