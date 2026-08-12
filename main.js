@@ -74,7 +74,7 @@ function sizeProjectHeroElements() {
   const description = hero.querySelector(".project-hero-description");
   if (description) {
     // Description font = 3% of banner height
-    description.style.fontSize = `${heroHeight * 0.03}px`;
+    description.style.fontSize = `${heroHeight * 0.025}px`;
   }
    
   // Bottom metadata text = 3% of banner height
@@ -82,7 +82,7 @@ function sizeProjectHeroElements() {
   if (meta) {
     meta.style.left = `${heroHeight * 0.06}px`;
     meta.style.bottom = `${heroHeight * 0.06}px`;
-    meta.style.fontSize = `${heroHeight * 0.03}px`;
+    meta.style.fontSize = `${heroHeight * 0.025}px`;
     meta.style.gap = `${heroHeight * 0.01}px`;
   }
 
@@ -92,7 +92,7 @@ function sizeProjectHeroElements() {
     // Space between "Tools" and icons
     toolBox.style.paddingTop = `${heroHeight * 0.01}px`;
     // Space between icons
-    toolBox.style.gap = `${heroHeight * 0.04}px`;
+    toolBox.style.gap = `${heroHeight * 0.03}px`;
   }
    
   // Tool icons = 5% of banner height
