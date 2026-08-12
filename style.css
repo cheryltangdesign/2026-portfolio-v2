@@ -367,7 +367,17 @@ section:not(.hero):not(.project-hero).is-visible {
 .project-section-text { max-width: 480px; }
 .project-section-text p { margin-bottom: 20px; }
 
-.project-section-media { width: 100%; min-width: 0; }
+.project-section-media {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px; }
+
+.project-section-media img {
+  display: block;
+  width: 100%;
+  height: auto; }
 
 /* Two images side by side, with captions underneath */
 .project-media-grid {
