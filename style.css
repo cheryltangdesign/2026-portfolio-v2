@@ -272,7 +272,7 @@
   container-type: size; }
 
 .project-hero--dark {
-  --hero-text: var(--grey-dark); }
+  --hero-text: var(--grey); }
 
 .project-hero-content,
 .project-hero-content h1,
