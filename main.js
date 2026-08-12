@@ -62,7 +62,7 @@ function sizeProjectHeroElements() {
     title.style.marginBottom = `${heroHeight * 0.03}px`;
   }
 
-/* HERO CONTENT POSITION */
+// HERO CONTENT POSITION
   const content = hero.querySelector(".project-hero-content");
   if (content) {
     // Left and top position = 5% of banner height
@@ -70,14 +70,14 @@ function sizeProjectHeroElements() {
     content.style.top = `${heroHeight * 0.05}px`;
   }
 
-  /* HERO DESCRIPTION */
+  // HERO DESCRIPTION
   const description = hero.querySelector(".project-hero-description");
   if (description) {
-    // Description font = 3% of banner height
+     // Description font = 2.5% of banner height
     description.style.fontSize = `${heroHeight * 0.025}px`;
   }
    
-  // Bottom metadata text = 3% of banner height
+  // Bottom metadata text = 2.5% of banner height
   const meta = hero.querySelector(".project-hero-meta");
   if (meta) {
     meta.style.left = `${heroHeight * 0.06}px`;
