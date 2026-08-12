@@ -305,7 +305,7 @@
 .project-hero-meta {
   position: absolute;
   left: 10cqh;
-  bottom: 8cqh;
+  bottom: 10cqh;
   z-index: 3;
   display: flex;
   flex-direction: column;
