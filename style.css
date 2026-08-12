@@ -436,6 +436,7 @@ section:not(.hero):not(.project-hero).is-visible {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateY(-2px);
   width: 40px;
   height: 40px;
   background: var(--white);
