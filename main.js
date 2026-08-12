@@ -55,10 +55,10 @@ function sizeProjectHeroElements() {
 
   const heroHeight = hero.offsetHeight;
 
-  // Title = 10% of banner height
+  // Title = 8% of banner height
   const title = hero.querySelector(".project-hero-content h1");
   if (title) {
-    title.style.fontSize = `${heroHeight * 0.10}px`;
+    title.style.fontSize = `${heroHeight * 0.08}px`;
     title.style.marginBottom = `${heroHeight * 0.03}px`;
   }
 
