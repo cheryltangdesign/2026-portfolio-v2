@@ -367,7 +367,7 @@ section:not(.hero):not(.project-hero).is-visible {
 .project-section-text { max-width: 480px; }
 .project-section-text p { margin-bottom: 20px; }
 
-.project-section-media { width: 100%; }
+.project-section-media { width: 100%; min-width: 0; }
 
 /* Two images side by side, with captions underneath */
 .project-media-grid {
@@ -389,7 +389,7 @@ section:not(.hero):not(.project-hero).is-visible {
 .project-media-grid figcaption {
   margin-top: 12px;
   color: var(--grey-light);
-  font-size: var(--small);
+  font-size: var(--body);
   line-height: 1.5; }
 
 .project .section-title { margin-bottom: 12px; }
