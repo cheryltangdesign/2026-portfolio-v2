@@ -438,13 +438,13 @@ section:not(.hero):not(.project-hero).is-visible {
   justify-content: center;
   width: 44px;
   height: 44px;
-  /*border: 1px solid rgba(0,0,0,0.2);*/
-  background: rgba(250,249,247,0.9);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--grey);
+  background: var(--green);
+  color: var(--bg);
+  border-radius: 100% 0 0 0;
   text-decoration: none;
   font-size: 18px;
+  font-weight: 600;
+  line-height: 1; 
   transition:
     background 0.2s ease,
     color 0.2s ease,
@@ -452,7 +452,7 @@ section:not(.hero):not(.project-hero).is-visible {
 }
 
 .back-to-top:hover {
-  background: var(--green);
+  background: var(--green-deep);
   color: var(--white);
   transform: translateY(-3px);
 }
@@ -539,7 +539,8 @@ section:not(.hero):not(.project-hero).is-visible {
     right: 16px;
     bottom: 16px;
     width: 40px;
-    height: 40px; }
+    height: 40px;
+    font-size: 14px; }
  
   .site-footer__links { grid-template-columns: 1fr; gap: 8px; }
       
