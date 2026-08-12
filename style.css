@@ -19,11 +19,11 @@
   --font-sans: "Spline Sans Mono", monospace;
 
   --hero: clamp(72px, 12vw, 180px);
-  --h1: clamp(36px,5vw,60px);
+  --h1: clamp(36px, 5vw, 60px);
   --h2: 34px;
   --h3: 22px;
-  --body: 16px;
-  --small: 13px;
+  --body: clamp(10px, 4vw, 16px);
+  --small: clamp(8px, 3vw, 12px);
    
   /* Width */
   --container: 1280px;
