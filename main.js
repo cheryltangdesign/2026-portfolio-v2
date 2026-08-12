@@ -66,7 +66,7 @@ function sizeProjectHeroElements() {
   const content = hero.querySelector(".project-hero-content");
   if (content) {
     // Left and top position = 5% of banner height
-    content.style.left = `${heroHeight * 0.05}px`;
+    content.style.left = `${heroHeight * 0.06}px`;
     content.style.top = `${heroHeight * 0.05}px`;
   }
 
@@ -80,10 +80,10 @@ function sizeProjectHeroElements() {
   // Bottom metadata text = 3% of banner height
   const meta = hero.querySelector(".project-hero-meta");
   if (meta) {
-    meta.style.left = `${heroHeight * 0.05}px`;
-    meta.style.bottom = `${heroHeight * 0.05}px`;
+    meta.style.left = `${heroHeight * 0.06}px`;
+    meta.style.bottom = `${heroHeight * 0.06}px`;
     meta.style.fontSize = `${heroHeight * 0.03}px`;
-    meta.style.gap = `${heroHeight * 0.02}px`;
+    meta.style.gap = `${heroHeight * 0.01}px`;
   }
 
   /* TOOL BOX */
