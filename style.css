@@ -290,7 +290,7 @@
   text-transform: uppercase; }
 
 .project-hero-description {
-  font-size: 2.5cqh;
+  font-size: 2.2cqh;
   font-weight: 300;
   line-height: 1.6;
   max-width: 400px;
@@ -310,7 +310,7 @@
 .project-hero-meta p {
   display: flex;
   flex-direction: column;
-  font-size: 2.5cqh;
+  font-size: 2.2cqh;
   line-height: 1.6;
   font-weight: 300; }
 
@@ -318,8 +318,8 @@
 .tool-box {
   display: flex;
   align-items: center;
-  gap: 3cqh;
-  padding-top: 1cqh; }
+  gap: 2cqh;
+  padding-top: .8cqh; }
 
 .tool {
   display: block;
