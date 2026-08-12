@@ -258,6 +258,7 @@
 /* Project Hero */
 .project-hero {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   width: 100vw;
