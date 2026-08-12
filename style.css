@@ -518,21 +518,9 @@ section:not(.hero):not(.project-hero).is-visible {
 
   .project-hero { width: 100vw; margin-left: calc(50% - 50vw); }
   .project-hero-content {
-    left: 24px;
-    right: 24px;
-    top: 32px;
     transform: none;
     width: auto;
     max-width: 80%; }
-  .project-hero-content h1 { margin-bottom: 12px; }
-  .project-hero-content p { font-size: 12px; }
-      
-  .project-hero-meta {
-    left: 24px;
-    bottom: 24px;
-    gap: 14px; }
-   
-  .tool-box { gap: 6px; }
 
   .project-section {
     grid-template-columns: 1fr;
