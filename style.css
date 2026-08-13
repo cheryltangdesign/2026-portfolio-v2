@@ -266,7 +266,7 @@
 
 /* Project Hero */
 .project-hero {
-  --hero-text: var(--grey-dark);
+  --hero-text: var(--grey);
   display: flex;
   align-items: flex-start;
   justify-content: center;
