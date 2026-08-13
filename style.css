@@ -257,7 +257,6 @@
 
 /* Project Hero */
 .project-hero {
-  --hero-text: var(--bg);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -277,7 +276,7 @@
 .project-hero-content,
 .project-hero-content h1,
 .project-hero-description,
-.project-hero-meta { color: var(--hero-text); }
+.project-hero-meta { color: var(--bg); }
 
 .project-hero > img {
   display: block;
