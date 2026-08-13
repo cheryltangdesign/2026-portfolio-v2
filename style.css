@@ -257,6 +257,7 @@
 
 /* Project Hero */
 .project-hero {
+  --hero-text: var(--grey-dark);
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -270,13 +271,12 @@
   overflow: hidden;
   container-type: size; }
 
-.project-hero--dark {
-  --hero-text: var(--grey); }
+.project-hero--light {--hero-text: var(--bg); }
 
 .project-hero-content,
 .project-hero-content h1,
 .project-hero-description,
-.project-hero-meta { color: var(--grey-dark); }
+.project-hero-meta { color: var(--hero-text); }
 
 .project-hero > img {
   display: block;
