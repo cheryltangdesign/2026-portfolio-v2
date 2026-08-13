@@ -276,7 +276,7 @@
 .project-hero-content,
 .project-hero-content h1,
 .project-hero-description,
-.project-hero-meta { color: var(--bg); }
+.project-hero-meta { color: var(--grey-dark); }
 
 .project-hero > img {
   display: block;
