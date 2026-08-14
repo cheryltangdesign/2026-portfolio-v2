@@ -25,7 +25,7 @@
 
   --body: clamp(12px, 1.05vw, 16px);
   --small: clamp(10px, 1vw, 14px);
-  --nav: clamp(10px, .8vw, 16px);
+  --nav: clamp(12px, .8vw, 16px);
    
   /* Width */
   --container: 1280px;
@@ -65,7 +65,7 @@
      justify-content: space-between;
      align-items: center;
      width: 100%;
-     padding: 0 clamp(12px, 4vw, 56px);
+     padding: 0 clamp(10px, 4vw, 56px);
      background: rgba(250, 249, 247, 0.9);
      backdrop-filter: blur(12px);
      -webkit-backdrop-filter: blur(12px); }
@@ -492,10 +492,10 @@ section:not(.hero):not(.project-hero).is-visible {
 .project-navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: clamp(16px, 3vw, 40px);
   width: 98vw;
   margin-left: calc((100% - 98vw) / 2);
-  padding: 0 56px; }
+  padding: 0 clamp(24px, 5vw, 80px); }
 
 .project-nav-section {
   padding-top: 40px;
@@ -631,10 +631,7 @@ section:not(.hero):not(.project-hero).is-visible {
 
   .project-media-grid { grid-template-columns: 1fr; gap: 32px; }
       
-  .project-navigation {
-    width: 98vw;
-    margin-left: calc((100% - 98vw) / 2);
-    padding: 50px 0px; }
+  .project-navigation { padding: 50px clamp(24px, 6vw, 56px); }
       
   .back-to-top {
     width: 40px;
