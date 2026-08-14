@@ -515,7 +515,9 @@ section:not(.hero):not(.project-hero).is-visible {
   font-size: var(--nav);
   font-weight: 500;
   letter-spacing: 0.01em;
-  line-height: 1.4; }
+  line-height: 1.4;
+  text-decoration: none;
+  color: var(--grey-light);}
 
 /* Back To Top */
 
