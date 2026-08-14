@@ -329,6 +329,7 @@
   bottom: 10cqh;
   z-index: 3;
   display: flex;
+  gap: 3cqh;
   flex-direction: column;
   align-items: flex-start;
   color: inherit; }
@@ -336,6 +337,7 @@
 .project-hero-meta p {
   display: flex;
   flex-direction: column;
+  margin: 0;
   font-size: 2.2cqh;
   line-height: 1.6;
   font-weight: 300; }
