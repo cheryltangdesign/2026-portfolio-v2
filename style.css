@@ -414,6 +414,17 @@ section:not(.hero):not(.project-hero).is-visible {
   width: 100%;
   height: auto; }
 
+.horizontal-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.horizontal-scroll img {
+  display: block;
+  width: 100%;
+  height: auto; }
+
 /* Two images side by side, with captions underneath */
 .project-media-grid {
   width: 100%;
@@ -591,6 +602,8 @@ section:not(.hero):not(.project-hero).is-visible {
     gap: 32px;
     padding: 0; }
 
+  .horizontal-scroll img { width: 160%; max-width: none; }
+      
   .feature-row { grid-template-columns: 1fr; gap: 24px; }
   .feature-media { width: 100%; }   
 
