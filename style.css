@@ -25,7 +25,7 @@
 
   --body: clamp(12px, 1.05vw, 16px);
   --small: clamp(10px, 1vw, 14px);
-  --nav: clamp(12px, 1vw, 16px);
+  --nav: clamp(10px, .8vw, 16px);
    
   /* Width */
   --container: 1280px;
