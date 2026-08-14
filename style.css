@@ -530,14 +530,17 @@ section:not(.hero):not(.project-hero).is-visible {
   transition:
     background 0.2s ease,
     color 0.2s ease,
-    transform 0.2s ease;
-}
+    transform 0.2s ease; }
 
 .back-to-top:hover {
   background: var(--green);
   color: var(--white);
-  transform: translateY(-3px);
-}
+  transform: translateY(-3px); }
+
+.star,
+.project-navigation a,
+.back-to-top {
+  font-family: "Noto Sans Symbols 2", sans-serif; }
 
 
    /* Footer */
