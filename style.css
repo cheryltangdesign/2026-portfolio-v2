@@ -602,7 +602,7 @@ section:not(.hero):not(.project-hero).is-visible {
     gap: 32px;
     padding: 0; }
 
-  .horizontal-scroll img { width: 160%; max-width: none; }
+  .horizontal-scroll img { width: 180%; max-width: none; }
       
   .feature-row { grid-template-columns: 1fr; gap: 24px; }
   .feature-media { width: 100%; }   
