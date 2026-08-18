@@ -403,7 +403,8 @@ section:not(.hero):not(.project-hero).is-visible {
   margin-bottom: clamp(14px, 1.5vw, 20px);
   color: var(--grey);
   font-size: var(--body);
-  line-height: 1.6; }
+  line-height: 1.6;
+  text-decoration: none; }
 
 .project-section-media {
   width: 100%;
