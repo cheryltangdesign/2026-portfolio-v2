@@ -428,7 +428,7 @@ section:not(.hero):not(.project-hero).is-visible {
   width: 100%;
   height: auto; }
 
-/* Two images side by side, with captions underneath */
+/* Images side by side, with captions underneath */
 .project-media-grid {
   width: 100%;
   display: grid;
@@ -437,6 +437,8 @@ section:not(.hero):not(.project-hero).is-visible {
   margin: 0;
   padding: 0;
   align-items: start; }
+
+.project-media-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .project-media-grid figure { width: 100%; margin: 0; padding: 0; }
 
