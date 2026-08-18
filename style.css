@@ -403,8 +403,13 @@ section:not(.hero):not(.project-hero).is-visible {
   margin-bottom: clamp(14px, 1.5vw, 20px);
   color: var(--grey);
   font-size: var(--body);
-  line-height: 1.6;
-  text-decoration: none; }
+  line-height: 1.6; }
+
+.project-section-text a,
+.project-section-text a:visited,
+.project-section-text a:active { color: var(--grey); }
+
+.project-section-text a:hover { color: var(--green); }
 
 .project-section-media {
   width: 100%;
