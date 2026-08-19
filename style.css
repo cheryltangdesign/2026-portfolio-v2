@@ -572,6 +572,7 @@ section:not(.hero):not(.project-hero).is-visible {
   transform: translateY(-3px); }
 
 .star,
+.section-title a,
 .project-navigation a,
 .back-to-top {
   font-family: "Noto Sans Symbols 2", sans-serif; }
