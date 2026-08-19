@@ -246,7 +246,7 @@
   font-size: 72px;
   line-height: 1;
 
-  color: #6f9b75;
+  color: var(--green);
 }
 
 
