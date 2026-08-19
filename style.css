@@ -15,7 +15,7 @@
   --rule: #1a1a1a;
    
   /* Typography */
-  --font-display: "Inter", sans-serif;
+  --font-display: "Space Mono", monospace;
   --font-sans: "Spline Sans Mono", monospace;
 
   --hero: clamp(48px, 8vw, 120px);
