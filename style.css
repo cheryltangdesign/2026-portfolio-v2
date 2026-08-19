@@ -122,178 +122,181 @@
    ========================================================= */
 
 .hero {
-  padding: 80px 0 100px;
+  padding: 80px 0 120px;
 }
 
-.hero-content {
-  position: relative;
-  width: min(1100px, 90%);
+.hero-inner {
+  width: min(1180px, 90%);
   margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 55px;
+  position: relative;
 }
 
 
 /* ---------------------------------------------------------
-   INTRO
+   Hi I'm
    --------------------------------------------------------- */
 
 .hero-intro {
-  width: 120px;
+  grid-column: 1;
+  grid-row: 1;
 
-  margin-left: 390px;
-  margin-bottom: 48px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 
-  font-family: var(--font-display);
-  font-size: 32px;
+  margin-bottom: 18px;
+
+  font-size: clamp(20px, 2vw, 30px);
   line-height: 1;
-
   color: var(--grey-light);
 }
 
+.hero-intro > span:first-child {
+  display: block;
+  margin-right: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Decorative lines
+   --------------------------------------------------------- */
+
 .hero-line {
+  display: block;
+
   width: 120px;
-  height: 4px;
+  height: 3px;
 
   background: var(--green);
+
   flex-shrink: 0;
 }
 
-.hero-intro .hero-line {
+.hero-line--top {
+  margin-top: 18px;
+}
+
+.hero-line--bottom {
   margin-top: 28px;
 }
 
 
 /* ---------------------------------------------------------
-   NAME
+   Name
    --------------------------------------------------------- */
 
 .hero-name {
+  grid-column: 1;
+  grid-row: 2;
+
   position: relative;
 
-  font-family: var(--font-display);
-  color: var(--green);
-
+  font-size: clamp(100px, 15vw, 220px);
+  line-height: 0.82;
   letter-spacing: -0.065em;
 }
 
-
-/* ---------------------------------------------------------
-   CHERYL
-   --------------------------------------------------------- */
-
-.hero-name-line {
+.hero-name-row {
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-.hero-cheryl {
-  line-height: 0.78;
+.hero-name-row--cheryl {
+  justify-content: flex-start;
 }
 
-.hero-cheryl > span {
-  font-size: clamp(130px, 15vw, 230px);
+.hero-name-row--tang {
+  justify-content: flex-start;
+
+  margin-top: 18px;
+}
+
+
+/* Cheryl */
+
+.name-bold {
   font-weight: 700;
+  color: var(--green-deep);
+}
+
+
+/* Tang */
+
+.name-light {
+  font-weight: 300;
+  color: var(--green-deep);
 }
 
 
 /* ---------------------------------------------------------
-   TANG + DESCRIPTION
+   Star
    --------------------------------------------------------- */
-
-.hero-tang-row {
-  margin-top: 35px;
-
-  display: flex;
-  align-items: center;
-}
-
-.hero-name-light {
-  font-size: clamp(130px, 15vw, 230px);
-  font-weight: 400;
-  line-height: 0.78;
-}
-
-
-/* ---------------------------------------------------------
-   STAR
-   --------------------------------------------------------- */
-
-/*
-   The star is positioned in the space BETWEEN
-   Cheryl and Tang rather than beside Cheryl.
-*/
 
 .hero-star {
   position: absolute;
 
   /*
-    Adjust this horizontal position according to
-    the width of "Cheryl".
-  */
-  left: calc(100% - 30px);
-
-  /*
-    Places the star approximately halfway between
-    the two name rows.
-  */
-  top: 48%;
+   * Sits between Cheryl and Tang rather than
+   * being attached directly to the final letter.
+   */
+  left: 78%;
+  top: 52%;
 
   transform: translate(-50%, -50%);
 
-  font-family: var(--font-sans);
-  font-size: 72px;
+  font-size: 0.32em;
   line-height: 1;
 
   color: var(--green-light);
+
+  font-weight: 400;
 }
 
 
 /* ---------------------------------------------------------
-   GREY DESCRIPTION
+   Bottom line
+   --------------------------------------------------------- */
+
+.hero-name .hero-line--bottom {
+  /*
+   * Position relative to Tang.
+   * This keeps it attached to the name when
+   * the screen changes size.
+   */
+  margin-left: 28%;
+}
+
+
+/* ---------------------------------------------------------
+   Description
    --------------------------------------------------------- */
 
 .hero-description {
-  margin-left: 85px;
+  grid-column: 2;
+  grid-row: 2;
 
-  display: flex;
-  flex-direction: column;
+  align-self: end;
 
-  /*
-    This centers the grey copy vertically against Tang.
-  */
-  justify-content: center;
+  padding-bottom: 8px;
 
-  font-family: var(--font-sans);
-  font-size: 18px;
+  max-width: 390px;
+
+  font-size: clamp(16px, 1.5vw, 24px);
   line-height: 1.25;
-  letter-spacing: 0;
 
   color: var(--grey-light);
 }
 
-.hero-description p {
-  margin: 0;
-}
-
-.hero-description-intro {
-  margin-bottom: 32px;
-}
-
-.hero-description-main {
-  margin: 0;
-}
-
-
-/* ---------------------------------------------------------
-   BOTTOM LINE
-   --------------------------------------------------------- */
-
-.hero-bottom-line {
-  margin-left: 280px;
-  margin-top: 48px;
+.hero-description p + p {
+  margin-top: 38px;
 }
 
 
