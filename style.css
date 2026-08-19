@@ -12,6 +12,7 @@
   --dark: #161221;
   --green-deep: #27391c;
   --green: #3a5a40;
+  --green-light: #588157; 
   --rule: #1a1a1a;
    
   /* Typography */
@@ -246,7 +247,7 @@
   font-size: 72px;
   line-height: 1;
 
-  color: var(--green);
+  color: var(--green-light);
 }
 
 
