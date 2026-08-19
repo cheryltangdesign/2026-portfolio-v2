@@ -132,8 +132,8 @@
    "Hi I'm"
    --------------------------------------------------------- */
 .hero-intro {
-  margin-left: 390px;
-  margin-bottom: 42px;
+  margin-left: 35%;
+  margin-bottom: 4%;
 
   font-family: var(--font-display);
   font-size: 32px;
@@ -142,8 +142,8 @@
 }
 
 .hero-intro-line {
-  width: 100px;
-  height: 4px;
+  width: 10%;
+  height: 0.4%;
   margin-top: 28px;
 
   background: var(--green);
@@ -191,8 +191,8 @@
    Star
    --------------------------------------------------------- */
 .hero-star {
-  margin-left: 45px;
-  margin-top: 25px;
+  margin-left: 4%;
+  margin-top: 2%;
 
   font-family: var(--font-sans);
   font-size: 50px;
@@ -204,8 +204,8 @@
    Description
    --------------------------------------------------------- */
 .hero-description {
-  margin-left: 85px;
-  margin-top: 30px;
+  margin-left: 8%;
+  margin-top: 2.5vw;
 
   font-family: var(--font-sans);
   font-size: 18px;
@@ -223,11 +223,11 @@
    Bottom line
    --------------------------------------------------------- */
 .hero-name-line-bottom {
-  width: 100px;
-  height: 4px;
+  width: 10%;
+  height: 0.4%;
 
-  margin-left: 280px;
-  margin-top: 48px;
+  margin-left: 25%;
+  margin-top: 4vw;
 
   background: var(--green);
 }
