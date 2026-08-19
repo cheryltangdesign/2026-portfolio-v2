@@ -116,9 +116,121 @@
 
 
    /* Hero */
-   .hero{ padding-top:80px; }
-   .hero-banner{ width:100%; max-width:1280px; margin:0 auto; }
-   /*.hero-banner img{ width:100%; height:16/9; object-fit:cover; }*/
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  padding: 80px 0 100px;
+}
+.hero-content {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+   "Hi I'm"
+   --------------------------------------------------------- */
+.hero-intro {
+  margin-left: 390px;
+  margin-bottom: 42px;
+
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 1;
+  color: var(--grey-light);
+}
+
+.hero-intro-line {
+  width: 100px;
+  height: 4px;
+  margin-top: 28px;
+
+  background: var(--green);
+}
+
+/* ---------------------------------------------------------
+   Name
+   --------------------------------------------------------- */
+.hero-name {
+  font-family: var(--font-display);
+  color: var(--green);
+  letter-spacing: -0.065em;
+}
+
+
+/* Each line of Cheryl / Tang */
+.hero-name-line {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------------------------------------------------------
+   Cheryl
+   --------------------------------------------------------- */
+.hero-name-bold {
+  font-size: clamp(130px, 15vw, 230px);
+  line-height: 0.78;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------
+   Tang
+   --------------------------------------------------------- */
+.hero-name-tang {
+  margin-top: 35px;
+}
+
+.hero-name-light {
+  font-size: clamp(130px, 15vw, 230px);
+  line-height: 0.78;
+  font-weight: 400;
+}
+
+/* ---------------------------------------------------------
+   Star
+   --------------------------------------------------------- */
+.hero-star {
+  margin-left: 45px;
+  margin-top: 25px;
+
+  font-family: var(--font-sans);
+  font-size: 50px;
+  line-height: 1;
+  color: var(--green);
+}
+
+/* ---------------------------------------------------------
+   Description
+   --------------------------------------------------------- */
+.hero-description {
+  margin-left: 85px;
+  margin-top: 30px;
+
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: 0;
+
+  color: var(--grey-light);
+}
+
+.hero-description p {
+  margin: 0;
+}
+
+/* ---------------------------------------------------------
+   Bottom line
+   --------------------------------------------------------- */
+.hero-name-line-bottom {
+  width: 120px;
+  height: 4px;
+
+  margin-left: 280px;
+  margin-top: 48px;
+
+  background: var(--green);
+}
+
 
    /* Section Title */
    section:not(.hero) {
