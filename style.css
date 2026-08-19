@@ -116,102 +116,90 @@
    .logo a:hover { color: var(--green); }
 
 
-   /* Hero */
 /* =========================================================
    HERO
    ========================================================= */
 .hero {
-  padding: 80px 0 100px;
+  padding: clamp(50px, 5vw, 80px) 0 clamp(70px, 7vw, 100px);
 }
 .hero-content {
   width: min(1100px, 90%);
   margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
-/* ---------------------------------------------------------
-   "Hi I'm"
-   --------------------------------------------------------- */
+/* Hi I'm */
+
 .hero-intro {
-  margin-left: 35%;
-  margin-bottom: 4%;
+  grid-column: 5 / 10;
+  margin: 0 0 clamp(30px, 3vw, 42px);
 
   font-family: var(--font-display);
-  font-size: 32px;
+  font-size: clamp(20px, 2.2vw, 32px);
   line-height: 1;
   color: var(--grey-light);
 }
 
 .hero-intro-line {
-  width: 10%;
-  height: 0.4%;
-  margin-top: 28px;
+  width: clamp(70px, 9vw, 100px);
+  height: 4px;
+  margin-top: clamp(20px, 2vw, 28px);
 
   background: var(--green);
 }
 
-/* ---------------------------------------------------------
-   Name
-   --------------------------------------------------------- */
+/* Name */
 .hero-name {
+  grid-column: 1 / 13;
+
   font-family: var(--font-display);
   color: var(--green);
   letter-spacing: -0.065em;
 }
 
-
-/* Each line of Cheryl / Tang */
+/* Cheryl */
 .hero-name-line {
   display: flex;
   align-items: center;
 }
 
-/* ---------------------------------------------------------
-   Cheryl
-   --------------------------------------------------------- */
 .hero-name-bold {
-  font-size: clamp(130px, 15vw, 230px);
+  font-size: clamp(90px, 15vw, 230px);
   line-height: 0.78;
   font-weight: 700;
 }
 
-/* ---------------------------------------------------------
-   Tang
-   --------------------------------------------------------- */
-.hero-name-tang {
-  margin-top: 35px;
-}
-
-.hero-name-light {
-  font-size: clamp(130px, 15vw, 230px);
-  line-height: 0.78;
-  font-weight: 400;
-}
-
-/* ---------------------------------------------------------
-   Star
-   --------------------------------------------------------- */
+/* Star */
 .hero-star {
-  margin-left: 4%;
-  margin-top: 2%;
+  margin-left: clamp(25px, 4vw, 45px);
+  margin-top: clamp(15px, 2vw, 25px);
 
   font-family: var(--font-sans);
-  font-size: 50px;
+  font-size: clamp(30px, 3.3vw, 50px);
   line-height: 1;
   color: var(--green-light);
 }
 
-/* ---------------------------------------------------------
-   Description
-   --------------------------------------------------------- */
+/* Tang */
+.hero-name-tang {
+  margin-top: clamp(20px, 2.5vw, 35px);
+}
+
+.hero-name-light {
+  font-size: clamp(90px, 15vw, 230px);
+  line-height: 0.78;
+  font-weight: 400;
+}
+
+/* Description */
 .hero-description {
-  margin-left: 8%;
-  margin-top: 2.5vw;
+  margin: 0 0 0 7.7%;
 
   font-family: var(--font-sans);
-  font-size: 18px;
+  font-size: clamp(13px, 1.2vw, 18px);
   line-height: 1.25;
-  letter-spacing: 0;
-
   color: var(--grey-light);
 }
 
@@ -219,15 +207,15 @@
   margin: 0;
 }
 
-/* ---------------------------------------------------------
-   Bottom line
-   --------------------------------------------------------- */
+/* Bottom line */
 .hero-name-line-bottom {
-  width: 10%;
-  height: 0.4%;
+  grid-column: 3 / 5;
 
-  margin-left: 25%;
-  margin-top: 4vw;
+  width: 100%;
+  max-width: 120px;
+  height: 4px;
+
+  margin-top: clamp(35px, 4vw, 48px);
 
   background: var(--green);
 }
