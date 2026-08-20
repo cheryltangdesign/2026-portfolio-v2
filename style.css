@@ -136,16 +136,16 @@
 
 .hero-intro {
   position: absolute;
-  left: 28%;
+  left: 25%;
   top: 10%;
   margin: 0;
   font-family: var(--font-display);
-  font-size: 4cqh;
+  font-size: 3.5cqh;
   line-height: 1;
   color: var(--grey-light); }
 
 .hero-intro-line {
-  width: 12cqh;
+  width: 10cqh;
   height: 0.45cqh;
   margin-top: 4cqh;
   background: var(--green); }
@@ -162,7 +162,7 @@
 .hero-cheryl {
   position: absolute;
   left: 10%;
-  top: 20%;
+  top: 22%;
   display: block; }
 
 .hero-name-bold {
@@ -174,8 +174,8 @@
 /* Star */
 .hero-star {
   position: absolute;
-  left: 60%;
-  top: 42%;
+  left: 56%;
+  top: 44%;
   margin: 0;
   font-family: var(--font-sans);
   font-size: 10cqh;
@@ -198,24 +198,22 @@
 /* Description */
 .hero-description {
   position: absolute;
-  left: 46%;
-  top: 58%;
+  left: 44%;
+  top: 56%;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 3cqh;
+  font-size: 2.8cqh;
   line-height: 1.25;
   color: var(--grey-light); }
 
-.hero-description p {
-  margin: 0;
-}
+.hero-description p { margin: 0; }
 
 /* Bottom Line */
 .hero-name-line-bottom {
   position: absolute;
-  left: 24%;
-  top: 80%;
-  width: 12cqh;
+  left: 22%;
+  top: 74%;
+  width: 10cqh;
   height: 0.45cqh;
   margin: 0;
   background: var(--green); }
