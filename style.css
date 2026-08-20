@@ -746,6 +746,10 @@ section:not(.hero):not(.project-hero).is-visible {
     gap: 32px;
     padding: 0; }
 
+  .project-first {
+    opacity: 1 !important;
+    transform: none !important; }
+      
   .horizontal-scroll img { width: 180%; max-width: none; }
       
   .feature-row { grid-template-columns: 1fr; gap: 24px; }
