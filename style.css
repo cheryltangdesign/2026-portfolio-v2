@@ -717,7 +717,7 @@ section:not(.hero):not(.project-hero).is-visible {
 /* Responsive */
    @media (max-width: 900px) {
       
-   header { height: 50px; padding: 0 16px; }
+   header { height: clamp(40px, 8vw, 50px); padding: 0 16px; }
    nav { gap: clamp(10px, 3vw, 18px); }
    nav a { font-size: clamp(11px, 1.8vw, 14px); }
 
