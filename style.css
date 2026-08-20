@@ -135,8 +135,8 @@
 /* Hi I'm */
 .hero-intro {
   position: absolute;
-  left: 29%;
-  top: 11%;
+  left: 28.5%;
+  top: 12%;
   margin: 0;
   font-family: var(--font-display);
   font-size: 3.4cqh;
@@ -145,7 +145,7 @@
 
 .hero-intro-line {
   width: 10cqh;
-  height: 0.45cqh;
+  height: 0.4cqh;
   margin-top: 4cqh;
   background: var(--green); }
 
@@ -197,11 +197,11 @@
 /* Description */
 .hero-description {
   position: absolute;
-  left: 44%;
-  top: 53.8%;
+  left: 43.5%;
+  top: 53.5%;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 2.6cqh;
+  font-size: 2.5cqh;
   line-height: 1.25;
   color: var(--grey-light); }
 
@@ -210,10 +210,10 @@
 /* Bottom Line */
 .hero-name-line-bottom {
   position: absolute;
-  left: 25%;
+  left: 24.5%;
   top: 74%;
   width: 10cqh;
-  height: 0.45cqh;
+  height: 0.4cqh;
   margin: 0;
   background: var(--green); }
 
