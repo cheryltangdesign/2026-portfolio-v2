@@ -144,7 +144,7 @@
   left: 31%;
 
   /* distance from top of hero */
-  top: 9%;
+  top: 10%;
 
   margin: 0;
 
@@ -156,7 +156,7 @@
 }
 
 .hero-intro-line {
-  width: 15cqh;
+  width: 12cqh;
   height: 0.45cqh;
 
   margin-top: 4cqh;
@@ -188,7 +188,7 @@
 .hero-name-bold {
   display: block;
 
-  font-size: 27cqh;
+  font-size: 26cqh;
   line-height: 0.78;
   font-weight: 700;
 }
@@ -201,13 +201,13 @@
     Positioned relative to the hero,
     NOT relative to Cheryl's text.
   */
-  left: 69%;
+  left: 60%;
   top: 42%;
 
   margin: 0;
 
   font-family: var(--font-sans);
-  font-size: 6cqh;
+  font-size: 10cqh;
   line-height: 1;
 
   color: var(--green-light);
@@ -217,8 +217,8 @@
 .hero-tang-row {
   position: absolute;
 
-  left: 11%;
-  top: 52%;
+  left: 10%;
+  top: 50%;
 
   display: block;
 }
@@ -226,7 +226,7 @@
 .hero-name-light {
   display: block;
 
-  font-size: 27cqh;
+  font-size: 26cqh;
   line-height: 0.78;
   font-weight: 400;
 }
@@ -235,13 +235,13 @@
 .hero-description {
   position: absolute;
 
-  left: 50%;
-  top: 64%;
+  left: 42%;
+  top: 60%;
 
   margin: 0;
 
   font-family: var(--font-sans);
-  font-size: 2.8cqh;
+  font-size: 3cqh;
   line-height: 1.25;
 
   color: var(--grey-light);
@@ -255,10 +255,10 @@
 .hero-name-line-bottom {
   position: absolute;
 
-  left: 23%;
-  top: 90%;
+  left: 24%;
+  top: 80%;
 
-  width: 13cqh;
+  width: 12cqh;
   height: 0.45cqh;
 
   margin: 0;
