@@ -133,10 +133,9 @@
   height: 100%; }
 
 /* Hi I'm */
-
 .hero-intro {
   position: absolute;
-  left: 25%;
+  left: 26%;
   top: 10%;
   margin: 0;
   font-family: var(--font-display);
@@ -178,7 +177,7 @@
   top: 44%;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 10cqh;
+  font-size: 8cqh;
   line-height: 1;
   color: var(--green-light); }
 
@@ -186,12 +185,12 @@
 .hero-tang-row {
   position: absolute;
   left: 10%;
-  top: 50%;
+  top: 48%;
   display: block; }
 
 .hero-name-light {
   display: block;
-  font-size: 26cqh;
+  font-size: 24cqh;
   line-height: 0.78;
   font-weight: 400; }
 
@@ -199,7 +198,7 @@
 .hero-description {
   position: absolute;
   left: 44%;
-  top: 56%;
+  top: 54%;
   margin: 0;
   font-family: var(--font-sans);
   font-size: 2.8cqh;
@@ -211,7 +210,7 @@
 /* Bottom Line */
 .hero-name-line-bottom {
   position: absolute;
-  left: 22%;
+  left: 24%;
   top: 74%;
   width: 10cqh;
   height: 0.45cqh;
