@@ -135,7 +135,7 @@
 /* Hi I'm */
 .hero-intro {
   position: absolute;
-  left: 28.5%;
+  left: 28.6%;
   top: 12.5%;
   margin: 0;
   font-family: var(--font-display);
@@ -147,7 +147,7 @@
 .hero-intro-line {
   width: 10cqh;
   height: 0.4cqh;
-  margin: 4cqh auto 0;
+  margin: 3cqh auto 0;
   background: var(--green); }
 
 /* Name */
