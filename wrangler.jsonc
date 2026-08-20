@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "2026-portfolio-v2",
+  "compatibility_date": "2026-08-15",
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      ".git/**",
+      ".github/**",
+      "node_modules/**"
+    ]
+  },
+  "observability": {
+    "enabled": true
+  }
+}
