@@ -135,11 +135,11 @@
 /* Hi I'm */
 .hero-intro {
   position: absolute;
-  left: 30%;
-  top: 10%;
+  left: 29%;
+  top: 11%;
   margin: 0;
   font-family: var(--font-display);
-  font-size: 3.5cqh;
+  font-size: 3.4cqh;
   line-height: 1;
   color: var(--grey-light); }
 
@@ -173,7 +173,7 @@
 /* Star */
 .hero-star {
   position: absolute;
-  left: 58%;
+  left: 59%;
   top: 44%;
   margin: 0;
   font-family: var(--font-sans);
@@ -198,10 +198,10 @@
 .hero-description {
   position: absolute;
   left: 44%;
-  top: 54%;
+  top: 53.8%;
   margin: 0;
   font-family: var(--font-sans);
-  font-size: 2.8cqh;
+  font-size: 2.6cqh;
   line-height: 1.25;
   color: var(--grey-light); }
 
@@ -210,7 +210,7 @@
 /* Bottom Line */
 .hero-name-line-bottom {
   position: absolute;
-  left: 24%;
+  left: 25%;
   top: 74%;
   width: 10cqh;
   height: 0.45cqh;
