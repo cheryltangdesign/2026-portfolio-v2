@@ -147,7 +147,7 @@
   width: 10cqh;
   height: 0.4cqh;
   margin-top: 4cqh;
-  margin-left: 3cqh;
+  margin-left: 2.5cqh;
   background: var(--green); }
 
 /* Name */
@@ -198,7 +198,7 @@
 /* Description */
 .hero-description {
   position: absolute;
-  left: 43.5%;
+  left: 43%;
   top: 53.5%;
   margin: 0;
   font-family: var(--font-sans);
@@ -211,7 +211,7 @@
 /* Bottom Line */
 .hero-name-line-bottom {
   position: absolute;
-  left: 24.2%;
+  left: 24.4%;
   top: 74%;
   width: 10cqh;
   height: 0.4cqh;
