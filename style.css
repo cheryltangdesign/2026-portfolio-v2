@@ -135,7 +135,7 @@
 /* Hi I'm */
 .hero-intro {
   position: absolute;
-  left: 26%;
+  left: 30%;
   top: 10%;
   margin: 0;
   font-family: var(--font-display);
@@ -160,7 +160,7 @@
 /* Cheryl */
 .hero-cheryl {
   position: absolute;
-  left: 10%;
+  left: 12%;
   top: 22%;
   display: block; }
 
@@ -173,7 +173,7 @@
 /* Star */
 .hero-star {
   position: absolute;
-  left: 56%;
+  left: 58%;
   top: 44%;
   margin: 0;
   font-family: var(--font-sans);
@@ -184,7 +184,7 @@
 /* Tang */
 .hero-tang-row {
   position: absolute;
-  left: 10%;
+  left: 12%;
   top: 48%;
   display: block; }
 
