@@ -768,5 +768,7 @@ section:not(.hero):not(.project-hero).is-visible {
       
   .site-footer__links a:first-child,
   .site-footer__links a:last-child,
-  .site-footer__sep { font-size: 0; justify-self: center; margin: 0; }   
+  .site-footer__sep { justify-self: center; }
+
+  .site-footer__sep { font-size: 0; margin: 0; }   
   .site-footer__sep::after { content: "—"; font-size: var(--body); } 
