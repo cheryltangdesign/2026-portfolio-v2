@@ -141,13 +141,13 @@
   font-family: var(--font-display);
   font-size: 3.4cqh;
   line-height: 1;
-  color: var(--grey-light); }
+  color: var(--grey-light);
+  text-align: center; }
 
 .hero-intro-line {
   width: 10cqh;
   height: 0.4cqh;
-  margin-top: 4cqh;
-  margin-left: 2cqh;
+  margin: 4cqh auto 0;
   background: var(--green); }
 
 /* Name */
