@@ -120,86 +120,130 @@
    HERO
    ========================================================= */
 .hero {
-  padding: clamp(50px, 5vw, 80px) 0 clamp(70px, 7vw, 100px);
+  width: 100%;
+  padding: 0;
+  
+  aspect-ratio: 2 / 1;
+  container-type: size;
+  position: relative;
+  overflow: hidden;
 }
-.hero-content {
-  width: min(1100px, 90%);
-  margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 /* Hi I'm */
 
 .hero-intro {
-  grid-column: 5 / 10;
-  margin: 0 0 clamp(30px, 3vw, 42px);
+  position: absolute;
+
+  /* equivalent to roughly 1/3 from the left */
+  left: 31%;
+
+  /* distance from top of hero */
+  top: 9%;
+
+  margin: 0;
 
   font-family: var(--font-display);
-  font-size: clamp(20px, 2.2vw, 32px);
+  font-size: 4cqh;
   line-height: 1;
+
   color: var(--grey-light);
 }
 
 .hero-intro-line {
-  width: clamp(70px, 9vw, 100px);
-  height: 4px;
-  margin-top: clamp(20px, 2vw, 28px);
+  width: 15cqh;
+  height: 0.45cqh;
+
+  margin-top: 4cqh;
 
   background: var(--green);
 }
 
 /* Name */
 .hero-name {
-  grid-column: 1 / 13;
+  position: absolute;
+  inset: 0;
 
   font-family: var(--font-display);
   color: var(--green);
+
   letter-spacing: -0.065em;
 }
 
 /* Cheryl */
-.hero-name-line {
-  display: flex;
-  align-items: center;
+.hero-cheryl {
+  position: absolute;
+
+  left: 10%;
+  top: 20%;
+
+  display: block;
 }
 
 .hero-name-bold {
-  font-size: clamp(90px, 15vw, 230px);
+  display: block;
+
+  font-size: 27cqh;
   line-height: 0.78;
   font-weight: 700;
 }
 
 /* Star */
 .hero-star {
-  margin-left: clamp(25px, 4vw, 45px);
-  margin-top: clamp(15px, 2vw, 25px);
+  position: absolute;
+
+  /*
+    Positioned relative to the hero,
+    NOT relative to Cheryl's text.
+  */
+  left: 69%;
+  top: 42%;
+
+  margin: 0;
 
   font-family: var(--font-sans);
-  font-size: clamp(30px, 3.3vw, 50px);
+  font-size: 6cqh;
   line-height: 1;
+
   color: var(--green-light);
 }
 
 /* Tang */
-.hero-name-tang {
-  margin-top: clamp(20px, 2.5vw, 35px);
+.hero-tang-row {
+  position: absolute;
+
+  left: 11%;
+  top: 52%;
+
+  display: block;
 }
 
 .hero-name-light {
-  font-size: clamp(90px, 15vw, 230px);
+  display: block;
+
+  font-size: 27cqh;
   line-height: 0.78;
   font-weight: 400;
 }
 
 /* Description */
 .hero-description {
-  margin: 0 0 0 7.7%;
+  position: absolute;
+
+  left: 50%;
+  top: 64%;
+
+  margin: 0;
 
   font-family: var(--font-sans);
-  font-size: clamp(13px, 1.2vw, 18px);
+  font-size: 2.8cqh;
   line-height: 1.25;
+
   color: var(--grey-light);
 }
 
@@ -207,15 +251,17 @@
   margin: 0;
 }
 
-/* Bottom line */
+/* Bottom Line */
 .hero-name-line-bottom {
-  grid-column: 3 / 5;
+  position: absolute;
 
-  width: 100%;
-  max-width: 120px;
-  height: 4px;
+  left: 23%;
+  top: 90%;
 
-  margin-top: clamp(35px, 4vw, 48px);
+  width: 13cqh;
+  height: 0.45cqh;
+
+  margin: 0;
 
   background: var(--green);
 }
