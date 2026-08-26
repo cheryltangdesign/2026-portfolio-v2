@@ -792,7 +792,7 @@ section:not(.hero):not(.project-hero).is-visible {
    nav a { font-size: clamp(11px, 1.8vw, 14px); }
 
    .hero { width: 100%; aspect-ratio: 2 / 1; margin-top: 5vw; margin-bottom: 5vw; }
-   .hero-content { transform: scale(1.1); transform-origin: center center; }
+   .hero-content { transform: scale(1.5); transform-origin: center center; }
       
    .work-grid{ grid-template-columns: 1fr; }
    .work-page { opacity: 1 !important; transform: none !important; }
