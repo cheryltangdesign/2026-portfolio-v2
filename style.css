@@ -793,6 +793,7 @@ section:not(.hero):not(.project-hero).is-visible {
 
       
    .work-grid{ grid-template-columns: 1fr; }
+   .work-page { opacity: 1 !important; transform: none !important; }
    .about{ grid-template-columns: 1fr; }
    .brands{ grid-template-columns: 1fr; gap:40px; }
    .contact{ grid-template-columns: 1fr; }
