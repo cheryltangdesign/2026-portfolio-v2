@@ -142,13 +142,21 @@
   font-size: 3.4cqh;
   line-height: 1;
   color: var(--grey-light);
-  text-align: center; }
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(15px);
+  animation: heroIntroIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards; }
 
 .hero-intro-line {
   width: 10cqh;
   height: 0.4cqh;
   margin: 3cqh auto 0;
-  background: var(--green); }
+  background: var(--green); 
+
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: heroLineIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.65s forwards; }
 
 /* Name */
 .hero-name {
@@ -163,13 +171,19 @@
   position: absolute;
   left: 12%;
   top: 22%;
-  display: block; }
+  display: block;
+
+  overflow: hidden; }
 
 .hero-name-bold {
   display: block;
   font-size: 26cqh;
   line-height: 0.78;
-  font-weight: 600; }
+  font-weight: 600;
+
+  opacity: 0;
+  transform: translateY(105%);
+  animation: heroNameReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards; }
 
 /* Star */
 .hero-star {
@@ -180,20 +194,30 @@
   font-family: var(--font-sans);
   font-size: 9cqh;
   line-height: 1;
-  color: var(--green-light); }
+  color: var(--green-light);
+
+  opacity: 0;
+  transform: scale(0.2) rotate(-25deg);
+  animation: heroStarIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards; }
 
 /* Tang */
 .hero-tang-row {
   position: absolute;
   left: 12%;
   top: 48%;
-  display: block; }
+  display: block;
+
+  overflow: hidden; }
 
 .hero-name-light {
   display: block;
   font-size: 24cqh;
   line-height: 0.78;
-  font-weight: 400; }
+  font-weight: 400;
+
+  opacity: 0;
+  transform: translateY(105%);
+  animation: heroNameReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards; }
 
 /* Description */
 .hero-description {
@@ -204,7 +228,11 @@
   font-family: var(--font-sans);
   font-size: 2.5cqh;
   line-height: 1.25;
-  color: var(--grey-light); }
+  color: var(--grey-light);
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroDescriptionIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.8s forwards; }
 
 .hero-description p { margin: 0; }
 
@@ -217,6 +245,52 @@
   height: 0.4cqh;
   margin: 0;
   background: var(--green); }
+
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: heroLineIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards; }
+
+/* =========================================================
+   HERO KEYFRAMES
+   ========================================================= */
+
+@keyframes heroIntroIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroNameReveal {
+  from { opacity: 0; transform: translateY(105%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroStarIn {
+  from { opacity: 0; transform: scale(0.2) rotate(-25deg); }
+  to { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes heroDescriptionIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroLineIn {
+  from { opacity: 0; transform: scaleX(0); }
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-intro,
+  .hero-intro-line,
+  .hero-name-bold,
+  .hero-star,
+  .hero-name-light,
+  .hero-description,
+  .hero-name-line-bottom { opacity: 1; transform: none; animation: none; }
+}
 
 
    /* Section Title */
