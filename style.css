@@ -791,6 +791,7 @@ section:not(.hero):not(.project-hero).is-visible {
    nav { gap: clamp(10px, 3vw, 18px); }
    nav a { font-size: clamp(11px, 1.8vw, 14px); }
 
+   .hero { aspect-ratio: auto; height: 125vw; min-height: 520px; max-height: 700px; }
       
    .work-grid{ grid-template-columns: 1fr; }
    .work-page { opacity: 1 !important; transform: none !important; }
