@@ -196,7 +196,7 @@
 
   opacity: 0;
   transform: scale(0.2) rotate(-25deg);
-  animation: heroStarIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards; }
+  animation: heroStarIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.6s forwards; }
 
 /* Tang */
 .hero-tang-row {
@@ -257,12 +257,12 @@
 }
 
 @keyframes heroNameReveal {
-  from { opacity: 0; transform: translateY(60px); }
+  from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes heroStarIn {
-  from { opacity: 0; transform: scale(0.2) rotate(-25deg); }
+  from { opacity: 0; transform: scale(0.2) rotate(-20deg); }
   to { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
