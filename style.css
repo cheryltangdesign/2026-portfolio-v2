@@ -262,7 +262,7 @@
 }
 
 @keyframes heroStarIn {
-  from { opacity: 0; transform: scale(0.2) rotate(-20deg); }
+  from { opacity: 0; transform: scale(0.2) rotate(-30deg); }
   to { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
